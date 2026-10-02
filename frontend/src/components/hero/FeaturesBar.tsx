@@ -34,8 +34,8 @@ const FEATURES: FeatureCardProps[] = [
 
 export function FeaturesBar() {
   return (
-    <div className="w-full bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/60 mt-12 sm:mt-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+    <div className="w-full bg-white rounded-2xl p-4 sm:p-5 lg:py-4 lg:px-6 shadow-sm border border-slate-200/60">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
         {FEATURES.map((item, idx) => (
           <div
             key={item.title}

@@ -6,14 +6,14 @@ export function DashboardPreview() {
   return (
     <div className="relative w-full">
       {/* Outer Ice-Blue Container Card */}
-      <div className="relative bg-[#EBF2F8] rounded-[32px] p-6 sm:p-8 lg:p-10 border border-slate-200/60 shadow-sm overflow-hidden">
+      <div className="relative bg-[#EBF2F8] rounded-[28px] sm:rounded-[32px] p-5 sm:p-6 lg:p-7 border border-slate-200/60 shadow-sm overflow-hidden">
         
         {/* Light 1 (Top-Right Ambient Glow - 420x420) */}
         <img
           src={light1Img}
           alt=""
           aria-hidden="true"
-          className="absolute -top-12 -right-12 w-[320px] sm:w-[420px] h-[320px] sm:h-[420px] pointer-events-none select-none z-0 object-contain opacity-90"
+          className="absolute -top-12 -right-12 w-[300px] sm:w-[380px] lg:w-[420px] h-[300px] sm:h-[380px] lg:h-[420px] pointer-events-none select-none z-0 object-contain opacity-90"
         />
 
         {/* Light 2 (Bottom-Left Ambient Glow) */}
@@ -21,13 +21,13 @@ export function DashboardPreview() {
           src={light2Img}
           alt=""
           aria-hidden="true"
-          className="absolute -bottom-40 -left-40 w-[280px] sm:w-[380px] h-[280px] sm:h-[380px] pointer-events-none select-none z-0 object-contain opacity-90"
+          className="absolute -bottom-40 -left-40 w-[260px] sm:w-[340px] lg:w-[380px] h-[260px] sm:h-[340px] lg:h-[380px] pointer-events-none select-none z-0 object-contain opacity-90"
         />
 
         {/* Inner Content Layer */}
         <div className="relative z-10">
           {/* Floating Top Badge (Sample Tag) */}
-          <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm text-xs font-semibold text-[#123C56] mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-slate-200/70 shadow-sm text-xs font-semibold text-[#123C56] mb-4">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Sample dashboard preview</span>
           </div>
