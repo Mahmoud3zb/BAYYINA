@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --color-brand-primary: #123C56;
+  --color-brand-dark: #0B192C;
+  --color-brand-secondary: #1E3E62;
+  --color-brand-blue: #1E5BB8;
+  --color-brand-slate: #64748B;
+  --color-brand-bg: #F4F7FA;
+  --color-brand-surface: #EBF2F7;
+}
+
+@layer utilities {
+  .font-headline {
+    font-family: var(--font-headline);
+  }
+}
