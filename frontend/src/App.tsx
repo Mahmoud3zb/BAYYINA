@@ -4,14 +4,17 @@ import { HeroSection } from './components/hero/HeroSection';
 import { RealExamplesSection } from './components/examples/RealExamplesSection';
 import { CoreSolutionsSection } from './components/solutions/CoreSolutionsSection';
 import { TechnologySection } from './components/technology/TechnologySection';
-import { ProcessSection } from './components/process/ProcessSection';
 import { CtaSection } from './components/cta/CtaSection';
 import { AboutHeroSection } from './components/about/AboutHeroSection';
 import { AboutUsSection } from './components/about/AboutUsSection';
 import { WhatWeDoSection } from './components/about/WhatWeDoSection';
 import { WhyWeDoItSection } from './components/about/WhyWeDoItSection';
-import { TheBayyinaWaySection } from './components/about/TheBayyinaWaySection';
+import { OneBusinessSection } from './components/about/OneBusinessSection';
+// import { TheBayyinaWaySection } from './components/about/TheBayyinaWaySection';
 import { ServicesHeroSection } from './components/services/ServicesHeroSection';
+import { ServicesShowcaseSection } from './components/services/ServicesShowcaseSection';
+import { ChooseYourServicesSection } from './components/services/ChooseYourServicesSection';
+import { EngagementProcessSection } from './components/services/EngagementProcessSection';
 import { Footer } from './components/layout/Footer';
 
 function App() {
@@ -50,6 +53,10 @@ function App() {
         {currentPage === 'services' ? (
           <>
             <ServicesHeroSection />
+            <ServicesShowcaseSection />
+            <ChooseYourServicesSection />
+            <EngagementProcessSection />
+            <CtaSection />
           </>
         ) : currentPage === 'about' ? (
           <>
@@ -57,7 +64,8 @@ function App() {
             <AboutUsSection />
             <WhatWeDoSection />
             <WhyWeDoItSection />
-            <TheBayyinaWaySection />
+            <OneBusinessSection />
+            {/* <TheBayyinaWaySection /> */}
             <CtaSection />
           </>
         ) : (
@@ -66,7 +74,6 @@ function App() {
             <RealExamplesSection />
             <CoreSolutionsSection />
             <TechnologySection />
-            <ProcessSection />
             <CtaSection />
           </>
         )}

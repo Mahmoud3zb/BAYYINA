@@ -23,7 +23,7 @@ export function AboutHeroSection() {
                   Business Decisions
                 </h1>
                 <p className="text-slate-500 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-lg mb-8 font-normal">
-                  An award-winning SEO agency with expertise in digital marketing, artificial intelligence, and data analytics—with a focus on understanding you.
+                  At BAYYINA, we believe that better business decisions begin with a clearer understanding of the information behind them—bringing together Finance, Data Analytics, and Business Intelligence.
                 </p>
 
                 {/* Call Now CTA Button */}
@@ -86,7 +86,7 @@ export function AboutHeroSection() {
                 <div className="bg-[#F0F3F7] rounded-[24px] p-6 sm:p-7 shadow-xs border border-slate-200/50 flex flex-col justify-between h-[210px] sm:h-[240px] transition-all duration-200 hover:shadow-md">
                   <div>
                     <h3 className="font-headline text-4xl sm:text-[46px] font-extrabold text-[#0A1727] tracking-tight mb-2 leading-none">
-                      230+
+                      20+
                     </h3>
                     <p className="text-xs text-slate-500 font-medium leading-relaxed max-w-[170px] mt-2">
                       some big companies that we work with, and trust us very much

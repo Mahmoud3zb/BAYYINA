@@ -28,10 +28,13 @@ export function WhyWeDoItSection() {
             {/* Body Copy */}
             <div className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-[1.72] font-normal mb-8 sm:mb-9 max-w-lg space-y-4">
               <p>
-                Organizations have more data than ever, yet many still struggle to see the full picture. Reports are disconnected. Metrics arrive too late. Decisions depend on manual work and partial views.
+                Businesses rarely suffer from a lack of information. More often, the challenge is having too much information in different places, without a clear connection between the numbers and the business itself.
               </p>
               <p>
-                Our purpose is simple: help organizations transform information into insight—and insight into action.
+                A report may show what happened; a dashboard shows what is happening. But true intelligence answers: <em>Why did it happen? What is changing? What requires attention?</em>
+              </p>
+              <p className="text-slate-500 text-xs sm:text-sm">
+                This is where BAYYINA creates value—transforming fragmented data into a structured view of performance so leaders move forward with confidence.
               </p>
             </div>
 

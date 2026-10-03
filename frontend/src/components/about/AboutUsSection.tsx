@@ -64,17 +64,17 @@ export function AboutUsSection() {
             <div>
               {/* Eyebrow */}
               <h3 className="font-bold text-lg sm:text-xl text-[#104263] tracking-wide mb-8 sm:mb-10">
-                ABOUT US
+                WHO WE ARE
               </h3>
 
               {/* Headline */}
               <h2 className="font-bold text-xl sm:text-2xl lg:text-[23px] text-[#0A1727] tracking-tight leading-snug mb-6 sm:mb-8">
-                Business Performance, Made Clear.
+                A multidisciplinary practice built around business understanding.
               </h2>
 
               {/* Paragraph Description */}
               <p className="text-slate-600 text-sm sm:text-base lg:text-[16px] leading-[1.68] max-w-[480px] font-normal mb-8 sm:mb-10">
-                BAYYINA helps organizations gain a clearer understanding of their financial and business performance through Finance, Data Analytics, and Business Intelligence. We connect the numbers, systems and operational realities behind your business so leaders can move forward with confidence.
+                BAYYINA operates at the intersection of financial understanding, analytical thinking, and business intelligence. We combine knowledge of financial performance with business data and reporting to look beyond individual numbers and create a clearer, more connected view of your business.
               </p>
             </div>
 

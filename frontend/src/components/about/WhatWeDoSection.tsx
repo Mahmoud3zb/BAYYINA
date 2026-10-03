@@ -12,7 +12,7 @@ const SERVICES: ServiceItem[] = [
     id: 'financial-analysis',
     title: 'Financial Analysis',
     description:
-      'Financial insight that helps you understand performance, profitability, cash flow, and planning.',
+      'Understanding profitability, cash flow, financial performance, trends, and the factors affecting results.',
     icon: ({ className }) => (
       <svg
         className={className}
@@ -52,7 +52,7 @@ const SERVICES: ServiceItem[] = [
     id: 'data-analytics',
     title: 'Data Analytics',
     description:
-      'Transform complex business data into meaningful patterns, trends, and actionable insights.',
+      'Analyzing business data to identify patterns, changes, opportunities, inefficiencies, and areas requiring attention.',
     icon: ({ className }) => (
       <svg
         className={className}
@@ -91,7 +91,7 @@ const SERVICES: ServiceItem[] = [
     id: 'business-intelligence',
     title: 'Business Intelligence',
     description:
-      'Connect your data and turn it into live dashboards, KPIs, and decision-ready intelligence.',
+      'Developing dashboards, reporting environments, KPIs, and management views that make important information easier to monitor and understand.',
     icon: ({ className }) => (
       <svg
         className={className}
@@ -139,9 +139,14 @@ export function WhatWeDoSection() {
     <section className="bg-[#104263] py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Heading */}
-        <h2 className="font-headline font-extrabold text-3xl sm:text-4xl text-white text-center tracking-tight mb-12 sm:mb-16">
-          What we do?
-        </h2>
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 className="font-headline font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
+            What we do?
+          </h2>
+          <p className="text-slate-300 text-sm sm:text-base lg:text-[17px] leading-relaxed font-normal max-w-2xl mx-auto">
+            We turn business information into a clearer view of performance across financial statements, sales, operations, and management.
+          </p>
+        </div>
 
         {/* Carousel Container with Side Arrows */}
         <div className="relative flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 max-w-[1360px] mx-auto">
@@ -222,6 +227,11 @@ export function WhatWeDoSection() {
             </svg>
           </button>
         </div>
+
+        {/* Bottom Client Note */}
+        <p className="text-center text-slate-300/80 text-xs sm:text-sm max-w-2xl mx-auto mt-10 sm:mt-12 font-medium leading-relaxed">
+          The objective is not simply to produce another report or dashboard. It is to create information that is relevant, connected, understandable, and useful for decision-making.
+        </p>
       </div>
     </section>
   );
