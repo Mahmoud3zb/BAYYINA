@@ -1,7 +1,7 @@
 function CheckIcon() {
   return (
     <svg
-      className="w-5 h-5 text-[#104263] shrink-0"
+      className="w-5 h-5 text-[#1E5BB8] shrink-0"
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ function ArrowRightIcon() {
 const FINANCE_ITEMS = [
   'Financial Statement Analysis',
   'Management Reporting',
-  'FP&A Architecture',
+  'FP&A',
   'Cash Flow Intelligence',
   'Profitability Analysis',
   'Dynamic Financial Modeling',
@@ -72,8 +72,8 @@ export function CoreSolutionsSection() {
   return (
     <section
       id="services"
-      style={{ backgroundColor: '#104263' }}
-      className="relative bg-[#104263] py-20 md:py-28 overflow-hidden text-white"
+      style={{ backgroundColor: '#1E3E62' }}
+      className="relative bg-[#1E3E62] py-20 md:py-28 overflow-hidden text-white"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="max-w-[1140px] mx-auto">
@@ -95,10 +95,10 @@ export function CoreSolutionsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-start">
           
           {/* Card 1: Finance */}
-          <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between shadow-2xl min-h-[560px] lg:min-h-[575px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-cyan-950/20">
+          <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
             <div>
               {/* Badge */}
-              <span className="inline-block bg-[#F1F5F9] text-[#104263] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
+              <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
                 Finance
               </span>
 
@@ -124,7 +124,7 @@ export function CoreSolutionsSection() {
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
                 href="#finance"
-                className="group inline-flex items-center gap-2 text-[#104263] font-bold text-sm hover:text-[#0B192C] transition-colors"
+                className="group inline-flex items-center gap-2 text-[#1E5BB8] font-bold text-sm hover:text-[#0B192C] transition-colors"
               >
                 <span>Explore Finance</span>
                 <ArrowRightIcon />
@@ -133,10 +133,10 @@ export function CoreSolutionsSection() {
           </div>
 
           {/* Card 2: Data Analytics (Intentionally longer at the bottom) */}
-          <div className="bg-white rounded-[32px] p-8 sm:p-10 pb-12 sm:pb-14 flex flex-col justify-between shadow-2xl min-h-[610px] lg:min-h-[630px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-cyan-950/20">
+          <div className="bg-white rounded-[32px] p-8 sm:p-10 pb-12 sm:pb-14 flex flex-col justify-between min-h-[610px] lg:min-h-[630px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
             <div>
               {/* Badge */}
-              <span className="inline-block bg-[#F1F5F9] text-[#104263] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
+              <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
                 Data Analytics
               </span>
 
@@ -178,7 +178,7 @@ export function CoreSolutionsSection() {
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
                 href="#analytics"
-                className="group inline-flex items-center gap-2 text-[#104263] font-bold text-sm hover:text-[#0B192C] transition-colors"
+                className="group inline-flex items-center gap-2 text-[#1E5BB8] font-bold text-sm hover:text-[#0B192C] transition-colors"
               >
                 <span>Explore Data Analytics</span>
                 <ArrowRightIcon />
@@ -186,11 +186,11 @@ export function CoreSolutionsSection() {
             </div>
           </div>
 
-          {/* Card 3: Business Intelligence (Radiant Blue Neon Glow) */}
-          <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2  transition-all duration-300 hover:-translate-y-1.5 ">
+          {/* Card 3: Business Intelligence (Radiant Neon Glow Aura) */}
+          <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
             <div>
               {/* Badge */}
-              <span className="inline-block bg-[#F1F5F9] text-[#104263] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
+              <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
                 Business Intelligence
               </span>
 
@@ -216,7 +216,7 @@ export function CoreSolutionsSection() {
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
                 href="#intelligence"
-                className="group inline-flex items-center gap-2 text-[#104263] font-bold text-sm hover:text-[#0B192C] transition-colors"
+                className="group inline-flex items-center gap-2 text-[#1E5BB8] font-bold text-sm hover:text-[#0B192C] transition-colors"
               >
                 <span>Explore Business Intelligence</span>
                 <ArrowRightIcon />

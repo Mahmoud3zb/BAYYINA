@@ -1,24 +1,47 @@
 import { useState } from 'react';
-import financialSampleImg from '../../assets/images/Financial Performance (Sample).png';
+import overviewImg from '../../assets/images/overveiw.png';
+import profitLossImg from '../../assets/images/profit&loss.png';
+import balanceSheetImg from '../../assets/images/balanceSheet.png';
+import cashFlowImg from '../../assets/images/cashFlow.png';
 
-interface DashboardTab {
+interface DashboardItem {
   id: string;
   label: string;
-  description?: string;
+  image: string;
+  alt: string;
 }
 
-const DASHBOARD_TABS: DashboardTab[] = [
-  { id: 'overview', label: 'Overview' },
-  { id: 'profit-loss', label: 'Profit & Loss' },
-  { id: 'balance-sheet', label: 'Balance Sheet' },
-  { id: 'cash-flow', label: 'Cash Flow' },
+const DASHBOARDS: DashboardItem[] = [
+  {
+    id: 'overview',
+    label: 'Overview',
+    image: overviewImg,
+    alt: 'Executive Financial Overview Dashboard',
+  },
+  {
+    id: 'profit-loss',
+    label: 'Profit & Loss',
+    image: profitLossImg,
+    alt: 'Profit and Loss Financial Dashboard',
+  },
+  {
+    id: 'balance-sheet',
+    label: 'Balance Sheet',
+    image: balanceSheetImg,
+    alt: 'Balance Sheet Financial Dashboard',
+  },
+  {
+    id: 'cash-flow',
+    label: 'Cash Flow',
+    image: cashFlowImg,
+    alt: 'Cash Flow Statement Financial Dashboard',
+  },
 ];
 
 export function RealExamplesSection() {
-  const [activeTab, setActiveTab] = useState<string>('overview');
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-  const totalSlides = 4;
+  const totalSlides = DASHBOARDS.length;
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
@@ -27,6 +50,8 @@ export function RealExamplesSection() {
   const handleNext = () => {
     setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
   };
+
+  const currentDashboard = DASHBOARDS[currentSlide];
 
   return (
     <section id="real-examples" className="py-16 md:py-24 overflow-hidden">
@@ -46,12 +71,12 @@ export function RealExamplesSection() {
 
         {/* Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-          {DASHBOARD_TABS.map((tab) => {
-            const isActive = activeTab === tab.id;
+          {DASHBOARDS.map((tab, idx) => {
+            const isActive = currentSlide === idx;
             return (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => setCurrentSlide(idx)}
                 className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'bg-[#104263] text-white shadow-sm'
@@ -86,9 +111,10 @@ export function RealExamplesSection() {
           {/* Main Dashboard Card */}
           <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 bg-white transition-all duration-300">
             <img
-              src={financialSampleImg}
-              alt="Financial Performance Dashboard Example"
-              className="w-full h-auto object-cover block"
+              key={currentDashboard.id}
+              src={currentDashboard.image}
+              alt={currentDashboard.alt}
+              className="w-full h-auto object-cover block transition-opacity duration-300"
               loading="lazy"
             />
           </div>
@@ -135,3 +161,4 @@ export function RealExamplesSection() {
     </section>
   );
 }
+
