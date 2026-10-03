@@ -8,8 +8,14 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'services', label: 'Services', href: '#services' },
 ];
 
-export function Header() {
-  const [activeTab, setActiveTab] = useState<string>('home');
+interface HeaderProps {
+  activeTab?: string;
+  onTabChange?: (tabId: string) => void;
+}
+
+export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = {}) {
+  const [internalTab, setInternalTab] = useState<string>('home');
+  const activeTab = controlledTab ?? internalTab;
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const lastScrollY = useRef<number>(0);
@@ -50,7 +56,16 @@ export function Header() {
       >
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-2.5 sm:py-3 flex items-center justify-between">
           {/* Brand Logo */}
-          <a href="#" className="flex flex-col group">
+          <a
+            href="#"
+            onClick={(e) => {
+              if (onTabChange) {
+                e.preventDefault();
+                onTabChange('home');
+              }
+            }}
+            className="flex flex-col group cursor-pointer"
+          >
             <span className="font-headline text-xl sm:text-2xl font-extrabold tracking-tight text-[#104263] transition-colors group-hover:text-[#0B192C]">
               BAYYINA
             </span>
@@ -67,8 +82,15 @@ export function Header() {
                 <a
                   key={item.id}
                   href={item.href}
-                  onClick={() => setActiveTab(item.id)}
-                  className={`px-5 py-2 text-sm font-semibold transition-all duration-200 ${
+                  onClick={(e) => {
+                    if (onTabChange) {
+                      e.preventDefault();
+                      onTabChange(item.id);
+                    } else {
+                      setInternalTab(item.id);
+                    }
+                  }}
+                  className={`px-5 py-2 text-sm font-semibold transition-all duration-200 cursor-pointer ${
                     isActive
                       ? 'bg-[#104263] text-white rounded-lg shadow-none'
                       : 'text-slate-700 hover:text-slate-950 rounded-lg hover:bg-white/40'
