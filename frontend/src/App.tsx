@@ -11,15 +11,18 @@ import { AboutUsSection } from './components/about/AboutUsSection';
 import { WhatWeDoSection } from './components/about/WhatWeDoSection';
 import { WhyWeDoItSection } from './components/about/WhyWeDoItSection';
 import { TheBayyinaWaySection } from './components/about/TheBayyinaWaySection';
+import { ServicesHeroSection } from './components/services/ServicesHeroSection';
 import { Footer } from './components/layout/Footer';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<string>('about');
+  const [currentPage, setCurrentPage] = useState<string>('services');
 
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (hash === 'about') {
+      if (hash === 'services') {
+        setCurrentPage('services');
+      } else if (hash === 'about') {
         setCurrentPage('about');
       } else if (hash === 'home' || hash === '') {
         setCurrentPage('home');
@@ -44,7 +47,11 @@ function App() {
     <div className="min-h-screen bg-[#F4F7FA] font-sans text-slate-800 flex flex-col antialiased">
       <Header activeTab={currentPage} onTabChange={handleTabChange} />
       <main className="flex-1">
-        {currentPage === 'about' ? (
+        {currentPage === 'services' ? (
+          <>
+            <ServicesHeroSection />
+          </>
+        ) : currentPage === 'about' ? (
           <>
             <AboutHeroSection />
             <AboutUsSection />
