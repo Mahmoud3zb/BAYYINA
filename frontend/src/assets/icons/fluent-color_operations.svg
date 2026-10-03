@@ -1,0 +1,30 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="op_blue_grad" x1="6" y1="6" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0284C7"/>
+      <stop offset="0.55" stop-color="#0369A1"/>
+      <stop offset="1" stop-color="#075985"/>
+    </linearGradient>
+    <linearGradient id="op_cyan_grad" x1="14" y1="12" x2="38" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.7" stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#0369A1"/>
+    </linearGradient>
+    <radialGradient id="op_glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 20) rotate(45) scale(18)">
+      <stop stop-color="#7DD3FC" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#0284C7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="op_shadow" x="0" y="2" width="40" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0369A1" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Background Ambient Circle -->
+  <circle cx="20" cy="20" r="18" fill="url(#op_blue_grad)"/>
+  <circle cx="20" cy="20" r="18" fill="url(#op_glow)"/>
+  <!-- Fluent Modern Operations Gear / Cogwheel -->
+  <g filter="url(#op_shadow)">
+    <!-- Main Outer Gear Ring -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7C20.6904 7 21.25 7.55964 21.25 8.25V9.30825C22.2858 9.54471 23.2662 9.94829 24.1537 10.4952L24.902 9.74697C25.3901 9.25881 26.1816 9.25881 26.6697 9.74697L28.253 11.3303C28.7412 11.8184 28.7412 12.6099 28.253 13.098L27.5048 13.8463C28.0517 14.7338 28.4553 15.7142 28.6917 16.75H29.75C30.4404 16.75 31 17.3096 31 18V20.25C31 20.9404 30.4404 21.5 29.75 21.5H28.6917C28.4553 22.5358 28.0517 23.5162 27.5048 24.4037L28.253 25.152C28.7412 25.6401 28.7412 26.4316 28.253 26.9197L26.6697 28.503C26.1816 28.9912 25.3901 28.9912 24.902 28.503L24.1537 27.7548C23.2662 28.3017 22.2858 28.7053 21.25 28.9417V30C21.25 30.6904 20.6904 31.25 20 31.25H17.75C17.0596 31.25 16.5 30.6904 16.5 30V28.9417C15.4642 28.7053 14.4838 28.3017 13.5963 27.7548L12.848 28.503C12.3599 28.9912 11.5684 28.9912 11.0803 28.503L9.49697 26.9197C9.00881 26.4316 9.00881 25.6401 9.49697 25.152L10.2452 24.4037C9.69829 23.5162 9.29471 22.5358 9.05825 21.5H8C7.30964 21.5 6.75 20.9404 6.75 20.25V18C6.75 17.3096 7.30964 16.75 8 16.75H9.05825C9.29471 15.7142 9.69829 14.7338 10.2452 13.8463L9.49697 13.098C9.00881 12.6099 9.00881 11.8184 9.49697 11.3303L11.0803 9.74697C11.5684 9.25881 12.3599 9.25881 12.848 9.74697L13.5963 10.4952C14.4838 9.94829 15.4642 9.54471 16.5 9.30825V8.25C16.5 7.55964 17.0596 7 17.75 7H20ZM18.875 14.5C16.3207 14.5 14.25 16.5707 14.25 19.125C14.25 21.6793 16.3207 23.75 18.875 23.75C21.4293 23.75 23.5 21.6793 23.5 19.125C23.5 16.5707 21.4293 14.5 18.875 14.5Z" fill="white"/>
+    <circle cx="18.875" cy="19.125" r="3.25" fill="url(#op_cyan_grad)"/>
+  </g>
+</svg>

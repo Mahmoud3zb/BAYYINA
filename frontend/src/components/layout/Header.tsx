@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '../ui/Button';
+import { MobileNavDrawer } from './MobileNavDrawer';
 import type { NavItem } from '../../types/navigation';
 
 const NAV_ITEMS: NavItem[] = [
@@ -18,6 +19,7 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
   const activeTab = controlledTab ?? internalTab;
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const lastScrollY = useRef<number>(0);
 
   useEffect(() => {
@@ -103,20 +105,55 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
           </nav>
 
           
-          <div className="flex items-center gap-3">
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={() => onTabChange?.('request')}
-              className={activeTab === 'request' ? 'ring-2 ring-offset-2 ring-[#104263] shadow-md' : ''}
+          {/* Right Action & Mobile Menu Toggle */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            {/* Desktop-only Request a Service CTA */}
+            <div className="hidden md:block">
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={() => onTabChange?.('request')}
+                className={activeTab === 'request' ? 'ring-2 ring-offset-2 ring-[#104263] shadow-md' : ''}
+              >
+                Request a Service
+              </Button>
+            </div>
+
+            {/* Mobile 3-Bar Hamburger Button */}
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/80 border border-slate-200/80 text-slate-700 hover:text-[#104263] hover:bg-slate-100 transition-all shadow-xs active:scale-95 cursor-pointer"
+              aria-label="Open navigation menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              Request a Service
-            </Button>
+              <svg
+                className="w-5 h-5 text-slate-700"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="4" y1="6" x2="20" y2="6" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="18" x2="20" y2="18" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
 
-      
+      {/* Mobile Navigation Drawer */}
+      <MobileNavDrawer
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        activeTab={activeTab}
+        onTabChange={onTabChange}
+        navItems={NAV_ITEMS}
+      />
+
       <div className="h-14 sm:h-16" />
     </>
   );

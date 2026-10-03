@@ -1,8 +1,16 @@
+import eurIcon from '../../assets/icons/cryptocurrency-color_eur.svg';
+import salesIcon from '../../assets/icons/thesvg-color_microsoft-dynamics-365-sales-insights.svg';
+import operationsIcon from '../../assets/icons/fluent-color_operations.svg';
+import hrIcon from '../../assets/icons/fluent-color_people.svg';
+import procurementIcon from '../../assets/icons/fluent-color_procurement.svg';
+import powerBiIcon from '../../assets/icons/logos_microsoft-power-bi.svg';
+
 interface Perspective {
   id: string;
   name: string;
   metrics: string[];
-  icon: (props: { className?: string }) => React.JSX.Element;
+  iconSrc: string;
+  iconBg: string;
 }
 
 const PERSPECTIVES: Perspective[] = [
@@ -10,70 +18,43 @@ const PERSPECTIVES: Perspective[] = [
     id: 'finance',
     name: 'FINANCE',
     metrics: ['Profitability', 'Cash Flow', 'Margins', 'Financial Performance'],
-    icon: ({ className }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-        <path d="M12 18V6" />
-      </svg>
-    ),
+    iconSrc: eurIcon,
+    iconBg: 'bg-blue-50/70 border-blue-100/70',
   },
   {
     id: 'sales',
     name: 'SALES',
     metrics: ['Revenue', 'Customers', 'Targets', 'Growth', 'Pipeline'],
-    icon: ({ className }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 7L13.5 15.5L8.5 10.5L2 17" />
-        <path d="M16 7H22V13" />
-      </svg>
-    ),
+    iconSrc: salesIcon,
+    iconBg: 'bg-emerald-50/70 border-emerald-100/70',
   },
   {
     id: 'operations',
     name: 'OPERATIONS',
     metrics: ['Productivity', 'Efficiency', 'Output', 'Performance'],
-    icon: ({ className }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-      </svg>
-    ),
+    iconSrc: operationsIcon,
+    iconBg: 'bg-sky-50/70 border-sky-100/70',
   },
   {
     id: 'hr',
     name: 'HR',
     metrics: ['Headcount', 'Workforce', 'Attendance', 'Turnover'],
-    icon: ({ className }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
+    iconSrc: hrIcon,
+    iconBg: 'bg-indigo-50/70 border-indigo-100/70',
   },
   {
     id: 'procurement',
     name: 'PROCUREMENT',
     metrics: ['Spend', 'Suppliers', 'Purchasing', 'Cost Trends'],
-    icon: ({ className }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <path d="M16 10a4 4 0 0 1-8 0" />
-      </svg>
-    ),
+    iconSrc: procurementIcon,
+    iconBg: 'bg-amber-50/70 border-amber-100/70',
   },
   {
     id: 'management',
     name: 'MANAGEMENT',
     metrics: ['KPIs', 'Performance', 'Trends', 'Business Overview'],
-    icon: ({ className }) => (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-      </svg>
-    ),
+    iconSrc: powerBiIcon,
+    iconBg: 'bg-amber-50/70 border-amber-100/70',
   },
 ];
 
@@ -96,23 +77,21 @@ export function OneBusinessSection() {
 
        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 max-w-[1240px] mx-auto">
-          {PERSPECTIVES.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.id}
-                className="bg-white rounded-[26px] p-7 sm:p-8 border border-slate-200/70 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  
-                  <div className="flex items-center gap-3.5 mb-5">
-                    <div className="w-12 h-12 rounded-[16px] bg-[#EEF5FF] text-[#1E5BB8] flex items-center justify-center group-hover:scale-108 group-hover:bg-[#E2EFFF] transition-all duration-300">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="font-headline font-bold text-lg sm:text-xl text-[#0A1727] tracking-tight">
-                      {item.name}
-                    </h3>
+          {PERSPECTIVES.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-[26px] p-7 sm:p-8 border border-slate-200/70 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                
+                <div className="flex items-center gap-3.5 mb-5">
+                  <div className={`w-12 h-12 rounded-[16px] ${item.iconBg} border flex items-center justify-center p-2.5 group-hover:scale-110 transition-all duration-300 shadow-xs shrink-0`}>
+                    <img src={item.iconSrc} alt={item.name} className="w-full h-full object-contain" />
                   </div>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-[#0A1727] tracking-tight">
+                    {item.name}
+                  </h3>
+                </div>
 
                   
                   <div className="flex flex-wrap gap-2 pt-1">
@@ -130,8 +109,7 @@ export function OneBusinessSection() {
                 
                 <div className="w-full h-1 bg-gradient-to-r from-[#1E5BB8]/0 via-[#1E5BB8]/30 to-[#1E5BB8]/0 rounded-full mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            );
-          })}
+            ))}
         </div>
 
         

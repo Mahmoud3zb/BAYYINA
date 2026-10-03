@@ -1,0 +1,28 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="proc_amber_grad" x1="6" y1="6" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D97706"/>
+      <stop offset="0.5" stop-color="#EA580C"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="proc_glow" x1="12" y1="8" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#EA580C" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="proc_shadow" x="2" y="3" width="36" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#7C2D12" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Background Ambient Circle -->
+  <circle cx="20" cy="20" r="18" fill="url(#proc_amber_grad)"/>
+  <circle cx="20" cy="20" r="18" fill="url(#proc_glow)"/>
+  <!-- Procurement Shopping Bag & Box -->
+  <g filter="url(#proc_shadow)">
+    <!-- Bag Handle -->
+    <path d="M15 15.5V13C15 10.24 17.24 8 20 8C22.76 8 25 10.24 25 13V15.5" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bag Body -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 15C10.12 15 9.6 15.48 9.55 16.11L8.25 28.11C8.18 28.98 8.87 29.75 9.75 29.75H30.25C31.13 29.75 31.82 28.98 31.75 28.11L30.45 16.11C30.4 15.48 29.88 15 29.25 15H10.75ZM16.5 18C16.5 18.55 16.05 19 15.5 19C14.95 19 14.5 18.55 14.5 18V17C14.5 16.45 14.95 16 15.5 16C16.05 16 16.5 16.45 16.5 17V18ZM24.5 19C25.05 19 25.5 18.55 25.5 18V17C25.5 16.45 25.05 16 24.5 16C23.95 16 23.5 16.45 23.5 17V18C23.5 18.55 23.95 19 24.5 19Z" fill="white"/>
+    <!-- Small Procurement Package Tag -->
+    <rect x="17.5" y="21.5" width="5" height="4.5" rx="1.2" fill="#FEF3C7"/>
+  </g>
+</svg>

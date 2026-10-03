@@ -70,10 +70,6 @@ export function ChooseYourServicesSection() {
             </h3>
           </div>
 
-          
-          <div className="hidden md:flex items-center justify-center">
-            <img src={activeCategory.iconSrc} alt="" className="w-7 h-7 object-contain opacity-90" />
-          </div>
 
           <p className="text-slate-500 sm:text-slate-600 text-sm sm:text-[15px] max-w-md font-normal leading-relaxed md:text-right">
             {activeCategory.lensDescription}

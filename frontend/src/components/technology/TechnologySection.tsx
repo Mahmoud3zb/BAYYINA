@@ -53,7 +53,7 @@ const TECH_ITEMS: TechItem[] = [
     icon: pythonIcon,
     badge: 'ADVANCED MODELS',
     badgeStyle: 'bg-[#F0F9FF] text-[#0284C7]',
-    title: 'Python & Pandas',
+    title: 'Python',
     description: 'Statistical regression models, probabilistic forecasting, automated reconciliations, and pipeline',
   },
 ];

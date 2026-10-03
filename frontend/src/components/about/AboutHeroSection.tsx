@@ -12,7 +12,7 @@ export function AboutHeroSection() {
     <section className="py-6 sm:py-8 lg:py-10">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
        
-        <div className="bg-[#FAFBFD] rounded-[32px] sm:rounded-[40px] p-8 sm:p-12 lg:p-16 border border-slate-200/70 shadow-sm relative overflow-hidden">
+        <div className="bg-[#FAFBFD] rounded-[28px] sm:rounded-[40px] p-5 sm:p-10 lg:p-16 border border-slate-200/70 shadow-sm relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
             
            
@@ -66,35 +66,38 @@ export function AboutHeroSection() {
             <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
               
              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 items-stretch">
+              {/* Top Row: Side-by-side cards on both mobile & desktop */}
+              <div className="grid grid-cols-2 gap-3.5 sm:gap-6 items-stretch">
                 
-               
-                <div className="relative w-full h-[210px] sm:h-[240px] flex items-end justify-start">
-                  <img
-                    src={shapeImg}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-full h-full object-contain object-left-bottom select-none pointer-events-none drop-shadow-xs"
-                  />
-                  
-                  <div className="absolute top-1 right-6 sm:right-7 w-13 h-13 sm:w-15 sm:h-15 rounded-full bg-[#103854] flex items-center justify-center shadow-xl border-2 border-white/20 transition-transform duration-200 hover:scale-110 z-20">
-                    <img src={trendingUpIcon} alt="Trending" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+                {/* Left Card: Quadrant Shape with anchored Trending Badge */}
+                <div className="relative w-full flex items-end justify-start">
+                  <div className="relative w-full aspect-[266/241] flex items-end">
+                    <img
+                      src={shapeImg}
+                      alt=""
+                      aria-hidden="true"
+                      className="w-full h-full object-contain object-left-bottom select-none pointer-events-none drop-shadow-xs"
+                    />
+                    
+                    {/* Floating Circular Arrow Badge pinned directly to curve of shape */}
+                    <div className="absolute -top-1 -right-1 sm:top-1 sm:right-2 lg:top-2 lg:right-3 w-10 h-10 sm:w-13 sm:h-13 lg:w-15 lg:h-15 rounded-full bg-[#103854] flex items-center justify-center shadow-xl border-2 border-white/20 transition-transform duration-200 hover:scale-110 z-20">
+                      <img src={trendingUpIcon} alt="Trending" className="w-5 h-5 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />
+                    </div>
                   </div>
                 </div>
 
-                
-                <div className="bg-[#F0F3F7] rounded-[24px] p-6 sm:p-7 shadow-xs border border-slate-200/50 flex flex-col justify-between h-[210px] sm:h-[240px] transition-all duration-200 hover:shadow-md">
+                {/* Right Card: 20+ KPI Card */}
+                <div className="bg-[#F0F3F7] rounded-[20px] sm:rounded-[24px] p-4 sm:p-6 lg:p-7 shadow-xs border border-slate-200/50 flex flex-col justify-between transition-all duration-200 hover:shadow-md">
                   <div>
-                    <h3 className="font-headline text-4xl sm:text-[46px] font-extrabold text-[#0A1727] tracking-tight mb-2 leading-none">
+                    <h3 className="font-headline text-2xl sm:text-4xl lg:text-[46px] font-extrabold text-[#0A1727] tracking-tight mb-1 sm:mb-2 leading-none">
                       20+
                     </h3>
-                    <p className="text-xs text-slate-500 font-medium leading-relaxed max-w-[170px] mt-2">
+                    <p className="text-[11px] sm:text-xs text-slate-500 font-medium leading-relaxed mt-1 sm:mt-2">
                       some big companies that we work with, and trust us very much
                     </p>
                   </div>
 
-                 
-                  <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden mt-auto">
+                  <div className="w-full h-1.5 sm:h-2 bg-slate-200 rounded-full overflow-hidden mt-3 sm:mt-auto">
                     <div className="w-[72%] h-full bg-[#104263] rounded-full" />
                   </div>
                 </div>
