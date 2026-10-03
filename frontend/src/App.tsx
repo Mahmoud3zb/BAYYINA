@@ -7,6 +7,10 @@ import { TechnologySection } from './components/technology/TechnologySection';
 import { ProcessSection } from './components/process/ProcessSection';
 import { CtaSection } from './components/cta/CtaSection';
 import { AboutHeroSection } from './components/about/AboutHeroSection';
+import { AboutUsSection } from './components/about/AboutUsSection';
+import { WhatWeDoSection } from './components/about/WhatWeDoSection';
+import { WhyWeDoItSection } from './components/about/WhyWeDoItSection';
+import { TheBayyinaWaySection } from './components/about/TheBayyinaWaySection';
 import { Footer } from './components/layout/Footer';
 
 function App() {
@@ -43,6 +47,11 @@ function App() {
         {currentPage === 'about' ? (
           <>
             <AboutHeroSection />
+            <AboutUsSection />
+            <WhatWeDoSection />
+            <WhyWeDoItSection />
+            <TheBayyinaWaySection />
+            <CtaSection />
           </>
         ) : (
           <>
