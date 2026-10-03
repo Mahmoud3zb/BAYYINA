@@ -5,10 +5,10 @@ export function Footer() {
       className="bg-[#104263] text-slate-300 pt-16 sm:pt-20 pb-12"
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Top 4 Columns Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 sm:pb-16">
           
-          {/* Column 1: Brand & Bio (lg:col-span-4) */}
+          
           <div className="lg:col-span-4">
             <a href="#" className="inline-block group mb-4">
               <span className="block font-headline text-2xl sm:text-[30px] font-extrabold tracking-tight text-white transition-colors group-hover:text-slate-100">
@@ -22,7 +22,7 @@ export function Footer() {
               BAYYINA helps organizations turn financial and business data into meaningful insights and decision-ready intelligence.
             </p>
 
-            {/* Location Badges */}
+            
             <div className="flex items-center gap-2.5">
               <span className="bg-[#235372] text-[#BAC7E1] text-xs px-3.5 py-1 rounded-full font-medium shadow-sm">
                 Egypt
@@ -33,7 +33,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Company (lg:col-span-2) */}
+          
           <div className="lg:col-span-2">
             <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-4 sm:mb-5">
               COMPANY
@@ -52,7 +52,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Services (lg:col-span-3) */}
+          
           <div className="lg:col-span-3">
             <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-4 sm:mb-5">
               SERVICES
@@ -76,13 +76,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Locations (lg:col-span-3) */}
+         
           <div className="lg:col-span-3">
             <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-4 sm:mb-5">
               CONTACT & LOCATIONS
             </h4>
 
-            {/* Email */}
+            
             <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Direct Email</span>
               <a
@@ -93,7 +93,7 @@ export function Footer() {
               </a>
             </div>
 
-            {/* Phone */}
+           
             <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Direct Line</span>
               <a
@@ -104,7 +104,7 @@ export function Footer() {
               </a>
             </div>
 
-            {/* Presence */}
+            
             <div className="mb-4">
               <span className="text-xs text-[#E3E9ED] block font-medium">Regional Presence</span>
               <span className="text-xs sm:text-[13px] text-[#8CA0B8] block mt-0.5">
@@ -112,7 +112,7 @@ export function Footer() {
               </span>
             </div>
 
-            {/* Connect with partners */}
+            
             <a
               href="#contact"
               className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-[#BAC7E1] hover:text-white transition-colors font-medium group mt-1"
@@ -136,7 +136,7 @@ export function Footer() {
 
         </div>
 
-        {/* Bottom Legal Row without harsh borders */}
+        
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-[#7B8FA6]">
           <p>© BAYYINA. All Rights Reserved.</p>
           <div className="flex items-center gap-6 sm:gap-8">

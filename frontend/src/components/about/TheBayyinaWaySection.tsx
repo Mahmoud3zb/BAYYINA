@@ -49,7 +49,7 @@ export function TheBayyinaWaySection() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28 relative">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
+        
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
           <span className="font-semibold text-xs sm:text-[13px] uppercase tracking-[0.2em] text-[#1E5BB8] mb-3 sm:mb-4 block">
             THE BAYYINA WAY
@@ -60,32 +60,33 @@ export function TheBayyinaWaySection() {
           </h2>
         </div>
 
-        {/* Steps Flow with Connecting Arrows */}
+       
         <div className="max-w-[1100px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 items-start">
             {steps.map((step, idx) => (
               <div key={step.number} className="relative flex flex-col items-center text-center group cursor-default">
-                {/* Step Number */}
+                
                 <span className="font-headline font-bold text-xs sm:text-sm text-[#1E5BB8] mb-3 block tracking-wide">
                   {step.number}
                 </span>
 
-                {/* Icon Squircle Box */}
+                
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-[22px] sm:rounded-[26px] bg-[#EEF5FF] flex items-center justify-center shadow-xs border border-blue-50/50 group-hover:scale-108 group-hover:bg-[#E2EFFF] group-hover:shadow-md transition-all duration-300 mb-4">
                   {step.icon}
                 </div>
 
-                {/* Step Label */}
+                
                 <span className="font-headline font-bold text-base sm:text-lg text-[#0A1727] tracking-tight mb-2">
                   {step.label}
                 </span>
 
-                {/* Step Secondary Description */}
+                
+                
                 <p className="text-xs sm:text-[13px] text-slate-500 font-medium leading-relaxed max-w-[200px]">
                   {step.description}
                 </p>
 
-                {/* Connecting Right Arrow (for desktop, between items) */}
+                
                 {idx < steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-12 -right-4 -translate-y-1/2 translate-x-1/2 text-slate-300 pointer-events-none z-10">
                     <svg
@@ -109,7 +110,7 @@ export function TheBayyinaWaySection() {
           </div>
         </div>
 
-        {/* Concluding Philosophy Banner */}
+        
         <div className="mt-16 sm:mt-24 max-w-3xl mx-auto text-center">
           <div className="p-8 sm:p-10 rounded-[28px] bg-gradient-to-b from-[#F8FAFC] to-[#F1F5F9] border border-slate-200/80 shadow-xs relative overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-[#1E5BB8] to-transparent" />

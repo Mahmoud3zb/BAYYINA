@@ -8,11 +8,11 @@ export function AboutUsSection() {
       <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-stretch">
           
-          {/* Left Visual Composition (lg:col-span-6) */}
+          
           <div className="lg:col-span-6 flex justify-center lg:justify-start">
             <div className="grid grid-cols-2 gap-4 sm:gap-5 w-full max-w-[460px] sm:max-w-[500px] items-stretch">
               
-              {/* Left Column: Rectangle 4 (The Eye with Stock Chart Reflection) */}
+              
               <div className="relative rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-sm bg-slate-100 aspect-[310/566]">
                 <img
                   src={rectangle4Img}
@@ -21,12 +21,12 @@ export function AboutUsSection() {
                 />
               </div>
 
-              {/* Right Column: +2 Years Card (Top) + Rectangle 5 (Bottom) */}
+              
               <div className="flex flex-col gap-4 sm:gap-5 justify-between">
                 
-                {/* Top Card: +2 Years Experience */}
+               
                 <div className="relative w-full rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-sm aspect-[310/140] flex flex-col items-center justify-center text-center p-4 bg-[#104263]">
-                  {/* Background Image Texture */}
+                  
                   <img
                     src={rectangleAboutImg}
                     alt=""
@@ -34,7 +34,7 @@ export function AboutUsSection() {
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none z-0"
                   />
                   
-                  {/* Card Text Content */}
+                 
                   <div className="relative z-10 flex flex-col items-center justify-center">
                     <span className="font-headline font-bold text-2xl sm:text-3xl lg:text-[34px] text-white tracking-tight leading-none mb-1 sm:mb-1.5">
                       +2 Years
@@ -45,7 +45,7 @@ export function AboutUsSection() {
                   </div>
                 </div>
 
-                {/* Bottom Card: Rectangle 5 (Magnifying Glass over Data) */}
+                
                 <div className="relative rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-sm flex-1 bg-slate-100">
                   <img
                     src={rectangle5Img}
@@ -59,26 +59,26 @@ export function AboutUsSection() {
             </div>
           </div>
 
-          {/* Right Text & Story Content (lg:col-span-6) */}
+         
           <div className="lg:col-span-6 flex flex-col justify-between self-stretch py-1 sm:py-2">
             <div>
-              {/* Eyebrow */}
+             
               <h3 className="font-bold text-lg sm:text-xl text-[#104263] tracking-wide mb-8 sm:mb-10">
                 WHO WE ARE
               </h3>
 
-              {/* Headline */}
+              
               <h2 className="font-bold text-xl sm:text-2xl lg:text-[23px] text-[#0A1727] tracking-tight leading-snug mb-6 sm:mb-8">
                 A multidisciplinary practice built around business understanding.
               </h2>
 
-              {/* Paragraph Description */}
+              
               <p className="text-slate-600 text-sm sm:text-base lg:text-[16px] leading-[1.68] max-w-[480px] font-normal mb-8 sm:mb-10">
                 BAYYINA operates at the intersection of financial understanding, analytical thinking, and business intelligence. We combine knowledge of financial performance with business data and reporting to look beyond individual numbers and create a clearer, more connected view of your business.
               </p>
             </div>
 
-            {/* Read More CTA Button */}
+           
             <div>
               <a
                 href="#services"

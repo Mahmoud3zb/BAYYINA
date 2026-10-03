@@ -24,15 +24,15 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Apply blur/shadow when scrolled past top
+      
       setIsScrolled(currentScrollY > 20);
 
-      // Scroll direction logic
+      
       if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        // Scrolling DOWN -> hide header
+        
         setIsVisible(false);
       } else if (currentScrollY < lastScrollY.current) {
-        // Scrolling UP -> reveal header
+        
         setIsVisible(true);
       }
 
@@ -55,7 +55,7 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-2.5 sm:py-3 flex items-center justify-between">
-          {/* Brand Logo */}
+          
           <a
             href="#"
             onClick={(e) => {
@@ -74,7 +74,7 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
             </span>
           </a>
 
-          {/* Center Pill Navigation */}
+          
           <nav className="hidden md:flex items-center p-1 rounded-xl gap-1">
             {NAV_ITEMS.map((item) => {
               const isActive = activeTab === item.id;
@@ -102,16 +102,21 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
             })}
           </nav>
 
-          {/* Right CTA */}
+          
           <div className="flex items-center gap-3">
-            <Button variant="primary" size="sm">
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => onTabChange?.('request')}
+              className={activeTab === 'request' ? 'ring-2 ring-offset-2 ring-[#104263] shadow-md' : ''}
+            >
               Request a Service
             </Button>
           </div>
         </div>
       </header>
 
-      {/* Spacer to prevent layout shift under fixed header */}
+      
       <div className="h-14 sm:h-16" />
     </>
   );

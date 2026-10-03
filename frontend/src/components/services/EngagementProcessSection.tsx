@@ -33,7 +33,7 @@ export function EngagementProcessSection() {
   return (
     <section className="bg-[#F8FAFC] py-16 sm:py-20 lg:py-28 relative">
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Centered Header */}
+        
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#E5EDF7] text-[#1E5BB8] font-bold text-xs tracking-wider uppercase mb-4">
             INSTITUTIONAL CADENCE
@@ -46,7 +46,7 @@ export function EngagementProcessSection() {
           </p>
         </div>
 
-        {/* 3 Phased Cards Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
           {PHASES.map((item) => (
             <div
@@ -54,23 +54,23 @@ export function EngagementProcessSection() {
               className="bg-[#F0F5FD] rounded-[24px] sm:rounded-[28px] p-7 sm:p-8 border border-blue-100/70 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Phase Badge */}
+                
                 <span className="inline-block bg-[#CCE2FC] text-[#1E5BB8] text-[11px] sm:text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-5">
                   {item.phase}
                 </span>
 
-                {/* Phase Title */}
+                
                 <h3 className="font-headline font-bold text-lg sm:text-xl text-[#0A1727] tracking-tight mb-3">
                   {item.title}
                 </h3>
 
-                {/* Phase Description */}
+                
                 <p className="text-slate-600 text-xs sm:text-[13.5px] leading-relaxed font-normal mb-8">
                   {item.description}
                 </p>
               </div>
 
-              {/* Bottom Deliverable Milestone */}
+              
               <div className="pt-5 border-t border-blue-200/50 flex items-center gap-2.5">
                 <svg
                   className="w-4 h-4 text-[#1E5BB8] shrink-0"

@@ -56,7 +56,7 @@ export function RealExamplesSection() {
   return (
     <section id="real-examples" className="py-16 md:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
+        
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="text-xs sm:text-sm font-bold tracking-widest text-[#1E5BB8] uppercase block mb-3">
             Business Intelligence
@@ -69,7 +69,7 @@ export function RealExamplesSection() {
           </p>
         </div>
 
-        {/* Filter Tabs */}
+        
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
           {DASHBOARDS.map((tab, idx) => {
             const isActive = currentSlide === idx;
@@ -89,9 +89,9 @@ export function RealExamplesSection() {
           })}
         </div>
 
-        {/* Dashboard Showcase Slider (Matching FeaturesBar width) */}
+       
         <div className="relative w-full mx-auto flex items-center justify-center">
-          {/* Left Arrow Button */}
+         
           <button
             onClick={handlePrev}
             aria-label="Previous Dashboard"
@@ -108,7 +108,7 @@ export function RealExamplesSection() {
             </svg>
           </button>
 
-          {/* Main Dashboard Card */}
+          
           <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 bg-white transition-all duration-300">
             <img
               key={currentDashboard.id}
@@ -119,7 +119,7 @@ export function RealExamplesSection() {
             />
           </div>
 
-          {/* Right Arrow Button */}
+          
           <button
             onClick={handleNext}
             aria-label="Next Dashboard"
@@ -137,12 +137,12 @@ export function RealExamplesSection() {
           </button>
         </div>
 
-        {/* Disclaimer / Illustration Caption */}
+        
         <p className="text-xs text-slate-400 font-medium text-center mt-6 mb-3">
           Sample dashboard for illustration only. All figures shown are fictional.
         </p>
 
-        {/* Carousel Pagination Dots */}
+       
         <div className="flex items-center justify-center gap-1.5">
           {Array.from({ length: totalSlides }).map((_, idx) => (
             <button

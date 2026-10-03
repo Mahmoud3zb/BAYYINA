@@ -43,12 +43,12 @@ export function FeaturesBar() {
               idx !== 0 ? 'lg:border-l lg:border-slate-100 lg:pl-6' : ''
             }`}
           >
-            {/* Circular Blue Icon Badge */}
+            
             <div className="w-12 h-12 rounded-full bg-[#EBF3FC] flex items-center justify-center shrink-0 transition-transform duration-200 hover:scale-105">
               <img src={item.icon} alt={item.title} className="w-6 h-6" />
             </div>
 
-            {/* Title & Subtitle */}
+           
             <div className="flex flex-col">
               <h3 className="font-headline font-bold text-base text-[#0B192C]">
                 {item.title}

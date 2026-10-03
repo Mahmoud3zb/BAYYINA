@@ -129,7 +129,7 @@ export function WhatWeDoSection() {
     setCurrentIndex((prev) => (prev === SERVICES.length - 1 ? 0 : prev + 1));
   };
 
-  // Reorder items according to currentIndex for smooth carousel cycling
+  
   const displayedServices = [
     ...SERVICES.slice(currentIndex),
     ...SERVICES.slice(0, currentIndex),
@@ -138,7 +138,7 @@ export function WhatWeDoSection() {
   return (
     <section className="bg-[#104263] py-16 sm:py-20 lg:py-24 relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Heading */}
+        
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="font-headline font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
             What we do?
@@ -148,9 +148,9 @@ export function WhatWeDoSection() {
           </p>
         </div>
 
-        {/* Carousel Container with Side Arrows */}
+        
         <div className="relative flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 max-w-[1360px] mx-auto">
-          {/* Left Arrow Button */}
+          
           <button
             type="button"
             onClick={handlePrev}
@@ -173,7 +173,7 @@ export function WhatWeDoSection() {
             </svg>
           </button>
 
-          {/* 3 Cards Grid */}
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full">
             {displayedServices.map((item) => {
               const IconComponent = item.icon;
@@ -182,20 +182,20 @@ export function WhatWeDoSection() {
                   key={item.id}
                   className="bg-white rounded-[28px] sm:rounded-[36px] p-8 sm:p-9 lg:p-10 flex flex-col items-center text-center shadow-xl shadow-black/10 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 border border-slate-100 group"
                 >
-                  {/* Icon Badge */}
+                 
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[18px] sm:rounded-[22px] bg-[#EEF5FF] flex items-center justify-center mb-6 text-[#1E5BB8] group-hover:scale-110 group-hover:bg-[#E2EFFF] transition-all duration-300">
                     <IconComponent className="w-7 h-7 sm:w-8 sm:h-8" />
                   </div>
 
-                  {/* Title */}
+                 
                   <h3 className="font-headline font-bold text-xl sm:text-[22px] text-[#0A1727] text-center mb-4 tracking-tight leading-snug">
                     {item.title}
                   </h3>
 
-                  {/* Divider Line */}
+                  
                   <div className="w-full h-[1px] bg-slate-100 mb-5" />
 
-                  {/* Description */}
+              
                   <p className="text-slate-500 text-sm sm:text-[15px] leading-relaxed text-center font-normal">
                     {item.description}
                   </p>
@@ -204,7 +204,7 @@ export function WhatWeDoSection() {
             })}
           </div>
 
-          {/* Right Arrow Button */}
+          
           <button
             type="button"
             onClick={handleNext}
@@ -228,7 +228,7 @@ export function WhatWeDoSection() {
           </button>
         </div>
 
-        {/* Bottom Client Note */}
+        
         <p className="text-center text-slate-300/80 text-xs sm:text-sm max-w-2xl mx-auto mt-10 sm:mt-12 font-medium leading-relaxed">
           The objective is not simply to produce another report or dashboard. It is to create information that is relevant, connected, understandable, and useful for decision-making.
         </p>

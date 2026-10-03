@@ -77,7 +77,7 @@ export function CoreSolutionsSection() {
     >
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="max-w-[1140px] mx-auto">
-          {/* Section Header */}
+         
           <div className="max-w-2xl mb-14 sm:mb-16">
             <span className="text-xs sm:text-sm font-bold tracking-widest text-[#82B3D4] uppercase block mb-3">
               Our Core Solutions
@@ -91,23 +91,23 @@ export function CoreSolutionsSection() {
             </p>
           </div>
 
-          {/* 3 Core Solutions Cards Grid */}
+         
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-start">
           
-          {/* Card 1: Finance */}
+          
           <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
             <div>
-              {/* Badge */}
+              
               <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
                 Finance
               </span>
 
-              {/* Title */}
+              
               <h3 className="font-headline font-extrabold text-2xl sm:text-[26px] text-[#0B192C] leading-snug mb-6">
                 Understand the numbers behind the business.
               </h3>
 
-              {/* Checklist */}
+              
               <ul className="space-y-3.5">
                 {FINANCE_ITEMS.map((item) => (
                   <li key={item} className="flex items-center gap-3">
@@ -120,7 +120,7 @@ export function CoreSolutionsSection() {
               </ul>
             </div>
 
-            {/* Bottom Link */}
+           
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
                 href="#finance"
@@ -132,22 +132,22 @@ export function CoreSolutionsSection() {
             </div>
           </div>
 
-          {/* Card 2: Data Analytics (Intentionally longer at the bottom) */}
+         
           <div className="bg-white rounded-[32px] p-8 sm:p-10 pb-12 sm:pb-14 flex flex-col justify-between min-h-[610px] lg:min-h-[630px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
             <div>
-              {/* Badge */}
+            
               <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
                 Data Analytics
               </span>
 
-              {/* Title */}
+             
               <h3 className="font-headline font-extrabold text-2xl sm:text-[26px] text-[#0B192C] leading-snug mb-6">
                 Turn business data into meaningful insight.
               </h3>
 
-              {/* Badges / Pill Tags Grid */}
+              
               <div className="space-y-2">
-                {/* 2-columns top tags */}
+                
                 {ANALYTICS_GRID.map((row, idx) => (
                   <div key={idx} className="grid grid-cols-2 gap-2">
                     {row.map((tag) => (
@@ -162,7 +162,7 @@ export function CoreSolutionsSection() {
                   </div>
                 ))}
 
-                {/* Full-width stacked tags */}
+                
                 {ANALYTICS_STACKED.map((tag) => (
                   <div
                     key={tag}
@@ -174,7 +174,7 @@ export function CoreSolutionsSection() {
               </div>
             </div>
 
-            {/* Bottom Link */}
+            
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
                 href="#analytics"
@@ -186,20 +186,20 @@ export function CoreSolutionsSection() {
             </div>
           </div>
 
-          {/* Card 3: Business Intelligence (Radiant Neon Glow Aura) */}
+          
           <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
             <div>
-              {/* Badge */}
+             
               <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
                 Business Intelligence
               </span>
 
-              {/* Title */}
+              
               <h3 className="font-headline font-extrabold text-2xl sm:text-[26px] text-[#0B192C] leading-snug mb-6">
                 Give every part of the business a clearer view of performance.
               </h3>
 
-              {/* Checklist */}
+              
               <ul className="space-y-3.5">
                 {BI_ITEMS.map((item) => (
                   <li key={item} className="flex items-center gap-3">
@@ -212,7 +212,7 @@ export function CoreSolutionsSection() {
               </ul>
             </div>
 
-            {/* Bottom Link */}
+           
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
                 href="#intelligence"

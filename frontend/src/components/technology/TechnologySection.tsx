@@ -61,11 +61,11 @@ const TECH_ITEMS: TechItem[] = [
 export function TechnologySection() {
   return (
     <section id="technology" className="relative py-20 md:py-28 overflow-hidden bg-[#F4F7FA]">
-      {/* Background Soft Ambient Light */}
+      
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px]  rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        {/* Section Header */}
+      
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <span className="text-xs sm:text-sm font-bold tracking-widest text-[#1E5BB8] uppercase block mb-3">
             Technology
@@ -79,14 +79,14 @@ export function TechnologySection() {
           </p>
         </div>
 
-        {/* 6 Technology Cards Grid (2 rows x 3 columns) */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {TECH_ITEMS.map((item) => (
             <div
               key={item.title}
               className="bg-white rounded-[28px] sm:rounded-[32px] p-7 sm:p-8 flex flex-col justify-between shadow-xl shadow-sky-950/5 border border-slate-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-sky-900/10"
             >
-              {/* Top Row: Icon & Category Badge */}
+             
               <div className="flex items-center justify-between gap-3 mb-6">
                 <div className="w-11 h-11 flex items-center justify-center shrink-0">
                   <img
@@ -102,7 +102,7 @@ export function TechnologySection() {
                 </span>
               </div>
 
-              {/* Content */}
+             
               <div>
                 <h3 className="font-headline font-bold text-lg sm:text-xl text-[#0B192C] mb-2.5">
                   {item.title}
