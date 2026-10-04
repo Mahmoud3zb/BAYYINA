@@ -23,7 +23,7 @@ export function AboutHeroSection() {
                   Business Decisions
                 </h1>
                 <p className="text-slate-500 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-lg mb-8 font-normal">
-                  At BAYYINA, we believe that better business decisions begin with a clearer understanding of the information behind them—bringing together Finance, Data Analytics, and Business Intelligence.
+                  At BAYINA, we believe that better business decisions begin with a clearer understanding of the information behind them—bringing together Finance, Data Analytics, and Business Intelligence.
                 </p>
 
                 
@@ -66,10 +66,10 @@ export function AboutHeroSection() {
             <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
               
              
-              {/* Top Row: Side-by-side cards on both mobile & desktop */}
+              
               <div className="grid grid-cols-2 gap-3.5 sm:gap-6 items-stretch">
                 
-                {/* Left Card: Quadrant Shape with anchored Trending Badge */}
+                
                 <div className="relative w-full flex items-end justify-start">
                   <div className="relative w-full aspect-[266/241] flex items-end">
                     <img
@@ -79,14 +79,14 @@ export function AboutHeroSection() {
                       className="w-full h-full object-contain object-left-bottom select-none pointer-events-none drop-shadow-xs"
                     />
                     
-                    {/* Floating Circular Arrow Badge pinned directly to curve of shape */}
+                    
                     <div className="absolute -top-1 -right-1 sm:top-1 sm:right-2 lg:top-2 lg:right-3 w-10 h-10 sm:w-13 sm:h-13 lg:w-15 lg:h-15 rounded-full bg-[#103854] flex items-center justify-center shadow-xl border-2 border-white/20 transition-transform duration-200 hover:scale-110 z-20">
                       <img src={trendingUpIcon} alt="Trending" className="w-5 h-5 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain" />
                     </div>
                   </div>
                 </div>
 
-                {/* Right Card: 20+ KPI Card */}
+               
                 <div className="bg-[#F0F3F7] rounded-[20px] sm:rounded-[24px] p-4 sm:p-6 lg:p-7 shadow-xs border border-slate-200/50 flex flex-col justify-between transition-all duration-200 hover:shadow-md">
                   <div>
                     <h3 className="font-headline text-2xl sm:text-4xl lg:text-[46px] font-extrabold text-[#0A1727] tracking-tight mb-1 sm:mb-2 leading-none">

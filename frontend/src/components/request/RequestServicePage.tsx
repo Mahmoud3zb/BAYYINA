@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import coverImg from '../../assets/images/cover.png';
+import coverImg from '../../assets/images/newCoverImage.jpeg';
 import type { FormData } from './types';
 import { STEPS, SERVICE_REQUEST_CONFIG } from './types';
 import { RequestStepper } from './RequestStepper';
@@ -140,7 +140,7 @@ export function RequestServicePage() {
     try {
       
       const payload = {
-        _subject: `New BAYYINA Service Request: ${formData.companyName} (${formData.fullName})`,
+        _subject: `New BAYINA Service Request: ${formData.companyName} (${formData.fullName})`,
         _template: 'table',
         _captcha: 'false',
         'Full Name': formData.fullName,
@@ -209,11 +209,11 @@ export function RequestServicePage() {
 
   return (
     <div className="bg-[#F8FAFC] pb-24">
-      {/* 1. Official Bayyina Bilingual Cover Banner - Full Width Edge-to-Edge */}
+      {/* 1. Official Bayina Bilingual Cover Banner - Full Width Edge-to-Edge */}
       <section className="w-full bg-white border-b border-slate-200/60 overflow-hidden">
         <img
           src={coverImg}
-          alt="BAYYINA - Where Finance Meets Analytics"
+          alt="BAYINA - Where Finance Meets Analytics"
           className="w-full h-auto object-cover block select-none"
         />
       </section>
@@ -318,7 +318,7 @@ export function RequestServicePage() {
             </div>
           </div>
 
-          {/* 3. Bottom 3 Institutional Assurance Cards */}
+          
           <RequestAssuranceCards />
         </div>
       </section>

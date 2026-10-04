@@ -12,14 +12,14 @@ export function Footer() {
           <div className="lg:col-span-4">
             <a href="#" className="inline-block group mb-4">
               <span className="block font-headline text-2xl sm:text-[30px] font-extrabold tracking-tight text-white transition-colors group-hover:text-slate-100">
-                BAYYINA
+                BAYINA
               </span>
               <span className="block text-[11px] font-bold tracking-[0.2em] text-[#BAC7E1] uppercase mt-2">
                 WHERE FINANCE MEETS ANALYTICS
               </span>
             </a>
             <p className="text-xs sm:text-[13px] text-[#8CA0B8] leading-relaxed max-w-sm mb-6">
-              BAYYINA helps organizations turn financial and business data into meaningful insights and decision-ready intelligence.
+              BAYINA helps organizations turn financial and business data into meaningful insights and decision-ready intelligence.
             </p>
 
             
@@ -86,10 +86,10 @@ export function Footer() {
             <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Direct Email</span>
               <a
-                href="mailto:contact@bayyina.analytics"
+                href="mailto:contact@bayina.analytics"
                 className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors block mt-0.5"
               >
-                contact@bayyina.analytics
+                contact@bayina.analytics
               </a>
             </div>
 
@@ -138,7 +138,7 @@ export function Footer() {
 
         
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-[#7B8FA6]">
-          <p>© BAYYINA. All Rights Reserved.</p>
+          <p>© BAYINA. All Rights Reserved.</p>
           <div className="flex items-center gap-6 sm:gap-8">
             <a href="#privacy" className="hover:text-white transition-colors">
               Privacy Policy

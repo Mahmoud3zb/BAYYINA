@@ -34,7 +34,7 @@ export function WhyWeDoItSection() {
                 A report may show what happened; a dashboard shows what is happening. But true intelligence answers: <em>Why did it happen? What is changing? What requires attention?</em>
               </p>
               <p className="text-slate-500 text-xs sm:text-sm">
-                This is where BAYYINA creates value—transforming fragmented data into a structured view of performance so leaders move forward with confidence.
+                This is where BAYINA creates value—transforming fragmented data into a structured view of performance so leaders move forward with confidence.
               </p>
             </div>
 

@@ -17,7 +17,7 @@ export function HeroContent() {
 
       
       <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-xl font-normal">
-        BAYYINA helps organizations understand financial and business performance through Finance, Data Analytics, and Business Intelligence.
+        BAYINA helps organizations understand financial and business performance through Finance, Data Analytics, and Business Intelligence.
       </p>
 
       

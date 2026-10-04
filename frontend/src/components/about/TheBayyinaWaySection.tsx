@@ -52,7 +52,7 @@ export function TheBayyinaWaySection() {
         
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
           <span className="font-semibold text-xs sm:text-[13px] uppercase tracking-[0.2em] text-[#1E5BB8] mb-3 sm:mb-4 block">
-            THE BAYYINA WAY
+            THE BAYINA WAY
           </span>
           <h2 className="font-headline font-semibold text-3xl sm:text-4xl lg:text-[42px] text-[#0B192C] tracking-tight leading-[1.22] uppercase">
             FROM INFORMATION TO <br />

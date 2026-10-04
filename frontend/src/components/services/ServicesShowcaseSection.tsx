@@ -87,7 +87,7 @@ export function ServicesShowcaseSection() {
                 
                 <img
                   src={serviceImg}
-                  alt="Bayyina Executive Dashboard"
+                  alt="Bayina Executive Dashboard"
                   className="w-full h-auto object-cover block select-none"
                 />
 
@@ -100,7 +100,7 @@ export function ServicesShowcaseSection() {
                     </span>
                   </div>
                   <span className="text-[10px] sm:text-xs font-semibold text-slate-300 tracking-wider uppercase shrink-0">
-                    BAYYINA Telemetry Core
+                    BAYINA Telemetry Core
                   </span>
                 </div>
               </div>

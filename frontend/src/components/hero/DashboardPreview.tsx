@@ -38,7 +38,7 @@ export function DashboardPreview() {
             <div className="relative rounded-t-2xl sm:rounded-t-3xl overflow-hidden shadow-2xl border-[6px] sm:border-[8px] border-slate-900 bg-[#0B192C]">
               <img
                 src={heroSampleImg}
-                alt="BAYYINA Financial Overview Dashboard Preview"
+                alt="BAYINA Financial Overview Dashboard Preview"
                 className="w-full h-auto object-cover block"
                 loading="eager"
               />

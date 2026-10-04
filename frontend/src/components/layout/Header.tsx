@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from '../ui/Button';
 import { MobileNavDrawer } from './MobileNavDrawer';
 import type { NavItem } from '../../types/navigation';
+import logoTightImg from '../../assets/images/logo_tight.png';
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'Home', href: '#' },
@@ -66,14 +67,13 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
                 onTabChange('home');
               }
             }}
-            className="flex flex-col group cursor-pointer"
+            className="flex items-center gap-2 group cursor-pointer py-0.5"
           >
-            <span className="font-headline text-xl sm:text-2xl font-extrabold tracking-tight text-[#104263] transition-colors group-hover:text-[#0B192C]">
-              BAYYINA
-            </span>
-            <span className="text-[8px] sm:text-[9px] font-semibold tracking-widest text-slate-400 uppercase">
-              Where Finance Meets Analytics
-            </span>
+            <img
+              src={logoTightImg}
+              alt="BAYINA | بينة"
+              className="h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[180px] sm:max-w-[210px] md:max-w-[230px] object-contain transition-transform group-hover:scale-102"
+            />
           </a>
 
           
@@ -105,9 +105,9 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
           </nav>
 
           
-          {/* Right Action & Mobile Menu Toggle */}
+          
           <div className="flex items-center gap-2.5 sm:gap-3">
-            {/* Desktop-only Request a Service CTA */}
+            
             <div className="hidden md:block">
               <Button
                 variant="primary"
@@ -119,7 +119,7 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
               </Button>
             </div>
 
-            {/* Mobile 3-Bar Hamburger Button */}
+           
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -145,7 +145,7 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
         </div>
       </header>
 
-      {/* Mobile Navigation Drawer */}
+      
       <MobileNavDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

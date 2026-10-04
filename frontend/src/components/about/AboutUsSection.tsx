@@ -74,7 +74,7 @@ export function AboutUsSection() {
 
               
               <p className="text-slate-600 text-sm sm:text-base lg:text-[16px] leading-[1.68] max-w-[480px] font-normal mb-8 sm:mb-10">
-                BAYYINA operates at the intersection of financial understanding, analytical thinking, and business intelligence. We combine knowledge of financial performance with business data and reporting to look beyond individual numbers and create a clearer, more connected view of your business.
+                BAYINA operates at the intersection of financial understanding, analytical thinking, and business intelligence. We combine knowledge of financial performance with business data and reporting to look beyond individual numbers and create a clearer, more connected view of your business.
               </p>
             </div>
 

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Button } from '../ui/Button';
 import type { NavItem } from '../../types/navigation';
+import logoTightImg from '../../assets/images/logo_tight.png';
 
 interface MobileNavDrawerProps {
   isOpen: boolean;
@@ -68,14 +69,13 @@ export function MobileNavDrawer({
           <div className="flex items-center justify-between pb-5 border-b border-slate-200/70 mb-6">
             <div
               onClick={() => handleItemClick('home')}
-              className="flex flex-col cursor-pointer"
+              className="flex items-center cursor-pointer"
             >
-              <span className="font-headline text-2xl font-extrabold tracking-tight text-[#104263]">
-                BAYYINA
-              </span>
-              <span className="text-[8px] font-semibold tracking-widest text-slate-400 uppercase">
-                Where Finance Meets Analytics
-              </span>
+              <img
+                src={logoTightImg}
+                alt="BAYINA | بينة"
+                className="h-8 w-auto max-w-[170px] object-contain"
+              />
             </div>
 
             

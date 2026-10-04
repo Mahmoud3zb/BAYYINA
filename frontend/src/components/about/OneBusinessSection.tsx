@@ -71,7 +71,7 @@ export function OneBusinessSection() {
             ONE BUSINESS. MULTIPLE PERSPECTIVES.
           </h2>
           <p className="text-slate-600 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-2xl mx-auto font-normal">
-            A business does not operate through one set of numbers. BAYYINA connects these perspectives to create a more complete understanding of how the business is performing.
+            A business does not operate through one set of numbers. BAYINA connects these perspectives to create a more complete understanding of how the business is performing.
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export function OneBusinessSection() {
         <div className="text-center mt-12 sm:mt-16">
           <p className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#104263] bg-white border border-slate-200/80 px-6 py-3 rounded-full shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#1E5BB8] animate-pulse" />
-            BAYYINA connects these perspectives to create a complete understanding of how the business is performing.
+            BAYINA connects these perspectives to create a complete understanding of how the business is performing.
           </p>
         </div>
       </div>
