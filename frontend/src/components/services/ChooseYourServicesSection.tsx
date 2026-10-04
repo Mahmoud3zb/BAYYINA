@@ -24,30 +24,32 @@ export function ChooseYourServicesSection({
   const navigate = useNavigate();
   const effectiveCategory = resolveCategoryId(categoryParam || selectedCategoryId);
 
-  const [activeCategoryId, setActiveCategoryId] = useState<string>(effectiveCategory);
+  const [prevCategory, setPrevCategory] = useState(effectiveCategory);
   const [activeCapabilityIndex, setActiveCapabilityIndex] = useState<number>(0);
 
-  useEffect(() => {
-    const target = resolveCategoryId(categoryParam || selectedCategoryId);
-    setActiveCategoryId(target);
+  if (prevCategory !== effectiveCategory) {
+    setPrevCategory(effectiveCategory);
     setActiveCapabilityIndex(0);
+  }
 
-    
+  const activeCategoryId = effectiveCategory;
+
+  useEffect(() => {
     if (categoryParam) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const el = document.getElementById('choose-your-services');
         if (el) {
           el.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
+      return () => clearTimeout(timer);
     }
-  }, [categoryParam, selectedCategoryId]);
+  }, [categoryParam]);
 
   const activeCategory = SERVICE_CATEGORIES.find((c) => c.id === activeCategoryId) || SERVICE_CATEGORIES[0];
   const activeCapability = activeCategory.capabilities[activeCapabilityIndex] || activeCategory.capabilities[0];
 
   const handleCategoryChange = (categoryId: string) => {
-    setActiveCategoryId(categoryId);
     setActiveCapabilityIndex(0);
     onCategoryChange?.(categoryId);
     navigate(`/services/${categoryId}`, { replace: true });
