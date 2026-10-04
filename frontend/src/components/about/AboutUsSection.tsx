@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import rectangle4Img from '../../assets/images/Rectangle 4.png';
 import rectangle5Img from '../../assets/images/Rectangle 5.png';
 import rectangleAboutImg from '../../assets/images/rectangleAbout.png';
@@ -80,8 +81,8 @@ export function AboutUsSection() {
 
            
             <div>
-              <a
-                href="#services"
+              <Link
+                to="/services"
                 className="group inline-flex items-center gap-3 bg-[#104263] hover:bg-[#0B3553] text-white font-semibold text-xs sm:text-sm px-7 py-3 rounded-full shadow-md shadow-[#104263]/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer w-fit"
               >
                 <span>Read More</span>
@@ -99,7 +100,7 @@ export function AboutUsSection() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 

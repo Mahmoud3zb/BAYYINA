@@ -1,23 +1,32 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import { MobileNavDrawer } from './MobileNavDrawer';
 import type { NavItem } from '../../types/navigation';
 import logoTightImg from '../../assets/images/logo_tight.png';
 
 const NAV_ITEMS: NavItem[] = [
-  { id: 'home', label: 'Home', href: '#' },
-  { id: 'about', label: 'About', href: '#about' },
-  { id: 'services', label: 'Services', href: '#services' },
+  { id: 'home', label: 'Home', href: '/' },
+  { id: 'about', label: 'About', href: '/about' },
+  { id: 'services', label: 'Services', href: '/services' },
 ];
 
-interface HeaderProps {
-  activeTab?: string;
-  onTabChange?: (tabId: string) => void;
-}
+export function Header() {
+  const location = useLocation();
+  const navigate = useNavigate();
 
-export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = {}) {
-  const [internalTab, setInternalTab] = useState<string>('home');
-  const activeTab = controlledTab ?? internalTab;
+  const currentPath = location.pathname;
+  const activeTab =
+    currentPath === '/'
+      ? 'home'
+      : currentPath.startsWith('/about')
+      ? 'about'
+      : currentPath.startsWith('/services')
+      ? 'services'
+      : currentPath.startsWith('/request')
+      ? 'request'
+      : '';
+
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -26,16 +35,11 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      
       setIsScrolled(currentScrollY > 20);
 
-      
       if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        
         setIsVisible(false);
       } else if (currentScrollY < lastScrollY.current) {
-        
         setIsVisible(true);
       }
 
@@ -58,15 +62,8 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 py-2.5 sm:py-3 flex items-center justify-between">
-          
-          <a
-            href="#"
-            onClick={(e) => {
-              if (onTabChange) {
-                e.preventDefault();
-                onTabChange('home');
-              }
-            }}
+          <Link
+            to="/"
             className="flex items-center gap-2 group cursor-pointer py-0.5"
           >
             <img
@@ -74,24 +71,15 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
               alt="BAYINA | بينة"
               className="h-8 sm:h-9 md:h-10 lg:h-11 w-auto max-w-[180px] sm:max-w-[210px] md:max-w-[230px] object-contain transition-transform group-hover:scale-102"
             />
-          </a>
+          </Link>
 
-          
           <nav className="hidden md:flex items-center p-1 rounded-xl gap-1">
             {NAV_ITEMS.map((item) => {
               const isActive = activeTab === item.id;
               return (
-                <a
+                <Link
                   key={item.id}
-                  href={item.href}
-                  onClick={(e) => {
-                    if (onTabChange) {
-                      e.preventDefault();
-                      onTabChange(item.id);
-                    } else {
-                      setInternalTab(item.id);
-                    }
-                  }}
+                  to={item.href}
                   className={`px-5 py-2 text-sm font-semibold transition-all duration-200 cursor-pointer ${
                     isActive
                       ? 'bg-[#104263] text-white rounded-lg shadow-none'
@@ -99,27 +87,23 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
                   }`}
                 >
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
 
-          
-          
           <div className="flex items-center gap-2.5 sm:gap-3">
-            
             <div className="hidden md:block">
               <Button
                 variant="primary"
                 size="sm"
-                onClick={() => onTabChange?.('request')}
+                onClick={() => navigate('/request')}
                 className={activeTab === 'request' ? 'ring-2 ring-offset-2 ring-[#104263] shadow-md' : ''}
               >
                 Request a Service
               </Button>
             </div>
 
-           
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(true)}
@@ -145,12 +129,10 @@ export function Header({ activeTab: controlledTab, onTabChange }: HeaderProps = 
         </div>
       </header>
 
-      
       <MobileNavDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         activeTab={activeTab}
-        onTabChange={onTabChange}
         navItems={NAV_ITEMS}
       />
 

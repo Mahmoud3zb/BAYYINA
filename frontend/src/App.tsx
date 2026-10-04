@@ -1,102 +1,34 @@
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/layout/Header';
-import { HeroSection } from './components/hero/HeroSection';
-import { RealExamplesSection } from './components/examples/RealExamplesSection';
-import { CoreSolutionsSection } from './components/solutions/CoreSolutionsSection';
-import { TechnologySection } from './components/technology/TechnologySection';
-import { CtaSection } from './components/cta/CtaSection';
-import { AboutHeroSection } from './components/about/AboutHeroSection';
-import { AboutUsSection } from './components/about/AboutUsSection';
-import { WhatWeDoSection } from './components/about/WhatWeDoSection';
-import { WhyWeDoItSection } from './components/about/WhyWeDoItSection';
-import { OneBusinessSection } from './components/about/OneBusinessSection';
-
-import { ServicesHeroSection } from './components/services/ServicesHeroSection';
-import { ServicesShowcaseSection } from './components/services/ServicesShowcaseSection';
-import { ChooseYourServicesSection } from './components/services/ChooseYourServicesSection';
-import { EngagementProcessSection } from './components/services/EngagementProcessSection';
-import { RequestServicePage } from './components/request/RequestServicePage';
 import { Footer } from './components/layout/Footer';
+import { ScrollToTop, HashRedirect } from './components/routing/ScrollToTop';
 
-const getInitialPage = (): string => {
-  if (typeof window === 'undefined') return 'home';
-  const hash = window.location.hash.replace('#', '').trim().toLowerCase();
-  if (hash === 'request' || hash === 'request-service') return 'request';
-  if (hash === 'services') return 'services';
-  if (hash === 'about') return 'about';
-  return 'home';
-};
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
+import { ServicesPage } from './pages/ServicesPage';
+import { RequestPage } from './pages/RequestPage';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<string>(getInitialPage);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '').trim().toLowerCase();
-      if (hash === 'request' || hash === 'request-service') {
-        setCurrentPage('request');
-      } else if (hash === 'services') {
-        setCurrentPage('services');
-      } else if (hash === 'about') {
-        setCurrentPage('about');
-      } else {
-        setCurrentPage('home');
-      }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  const handleTabChange = (tabId: string) => {
-    setCurrentPage(tabId);
-    if (tabId === 'home') {
-      if (window.location.hash) {
-        window.history.pushState(null, '', window.location.pathname);
-      }
-    } else {
-      window.location.hash = tabId;
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <div className="min-h-screen bg-[#F4F7FA] font-sans text-slate-800 flex flex-col antialiased">
-      <Header activeTab={currentPage} onTabChange={handleTabChange} />
-      <main className="flex-1">
-        {currentPage === 'request' ? (
-          <RequestServicePage />
-        ) : currentPage === 'services' ? (
-          <>
-            <ServicesHeroSection />
-            <ServicesShowcaseSection />
-            <ChooseYourServicesSection />
-            <EngagementProcessSection />
-            <CtaSection />
-          </>
-        ) : currentPage === 'about' ? (
-          <>
-            <AboutHeroSection />
-            <AboutUsSection />
-            <WhatWeDoSection />
-            <WhyWeDoItSection />
-            <OneBusinessSection />
+    <BrowserRouter>
+      <div className="min-h-screen bg-[#F4F7FA] font-sans text-slate-800 flex flex-col antialiased">
+        <ScrollToTop />
+        <HashRedirect />
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:categoryId" element={<ServicesPage />} />
+            <Route path="/request" element={<RequestPage />} />
             
-            <CtaSection />
-          </>
-        ) : (
-          <>
-            <HeroSection />
-            <RealExamplesSection />
-            <CoreSolutionsSection />
-            <TechnologySection />
-            <CtaSection />
-          </>
-        )}
-      </main>
-      <Footer />
-    </div>
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

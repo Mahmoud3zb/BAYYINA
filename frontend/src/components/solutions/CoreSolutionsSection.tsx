@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 function CheckIcon() {
   return (
     <svg
@@ -68,10 +70,23 @@ const BI_ITEMS = [
   'Real-Time Decision Support',
 ];
 
-export function CoreSolutionsSection() {
+interface CoreSolutionsSectionProps {
+  onExploreService?: (category: 'finance' | 'analytics' | 'bi') => void;
+}
+
+export function CoreSolutionsSection({ onExploreService }: CoreSolutionsSectionProps = {}) {
+  const navigate = useNavigate();
+
+  const handleNavigate = (category: 'finance' | 'analytics' | 'bi') => {
+    if (onExploreService) {
+      onExploreService(category);
+    } else {
+      navigate(`/services/${category}`);
+    }
+  };
   return (
     <section
-      id="services"
+      id="core-solutions"
       style={{ backgroundColor: '#1E3E62' }}
       className="relative bg-[#1E3E62] py-20 md:py-28 overflow-hidden text-white"
     >
@@ -95,7 +110,10 @@ export function CoreSolutionsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-start">
           
           
-          <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
+          <div
+            onClick={() => handleNavigate('finance')}
+            className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer"
+          >
             <div>
               
               <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
@@ -123,7 +141,12 @@ export function CoreSolutionsSection() {
            
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
-                href="#finance"
+                href="/services/finance"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  handleNavigate('finance');
+                }}
                 className="group inline-flex items-center gap-2 text-[#1E5BB8] font-bold text-sm hover:text-[#0B192C] transition-colors"
               >
                 <span>Explore Finance</span>
@@ -133,7 +156,10 @@ export function CoreSolutionsSection() {
           </div>
 
          
-          <div className="bg-white rounded-[32px] p-8 sm:p-10 pb-12 sm:pb-14 flex flex-col justify-between min-h-[610px] lg:min-h-[630px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
+          <div
+            onClick={() => handleNavigate('analytics')}
+            className="bg-white rounded-[32px] p-8 sm:p-10 pb-12 sm:pb-14 flex flex-col justify-between min-h-[610px] lg:min-h-[630px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer"
+          >
             <div>
             
               <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
@@ -177,7 +203,12 @@ export function CoreSolutionsSection() {
             
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
-                href="#analytics"
+                href="/services/analytics"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  handleNavigate('analytics');
+                }}
                 className="group inline-flex items-center gap-2 text-[#1E5BB8] font-bold text-sm hover:text-[#0B192C] transition-colors"
               >
                 <span>Explore Data Analytics</span>
@@ -187,7 +218,10 @@ export function CoreSolutionsSection() {
           </div>
 
           
-          <div className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer">
+          <div
+            onClick={() => handleNavigate('bi')}
+            className="bg-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between min-h-[560px] lg:min-h-[575px] ring-2 ring-sky-400/80 shadow-[0_0_35px_rgba(37,99,235,0.65),0_0_70px_rgba(30,76,138,0.5)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(37,99,235,0.85),0_0_90px_rgba(30,76,138,0.7)] cursor-pointer"
+          >
             <div>
              
               <span className="inline-block bg-[#F1F5F9] text-[#1E3E62] text-xs font-bold px-3.5 py-1.5 rounded-lg tracking-wider uppercase mb-6">
@@ -215,7 +249,12 @@ export function CoreSolutionsSection() {
            
             <div className="pt-6 mt-8 border-t border-slate-100">
               <a
-                href="#intelligence"
+                href="/services/bi"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  handleNavigate('bi');
+                }}
                 className="group inline-flex items-center gap-2 text-[#1E5BB8] font-bold text-sm hover:text-[#0B192C] transition-colors"
               >
                 <span>Explore Business Intelligence</span>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Footer() {
   return (
     <footer
@@ -10,14 +12,14 @@ export function Footer() {
           
           
           <div className="lg:col-span-4">
-            <a href="#" className="inline-block group mb-4">
+            <Link to="/" className="inline-block group mb-4">
               <span className="block font-headline text-2xl sm:text-[30px] font-extrabold tracking-tight text-white transition-colors group-hover:text-slate-100">
                 BAYINA
               </span>
               <span className="block text-[11px] font-bold tracking-[0.2em] text-[#BAC7E1] uppercase mt-2">
                 WHERE FINANCE MEETS ANALYTICS
               </span>
-            </a>
+            </Link>
             <p className="text-xs sm:text-[13px] text-[#8CA0B8] leading-relaxed max-w-sm mb-6">
               BAYINA helps organizations turn financial and business data into meaningful insights and decision-ready intelligence.
             </p>
@@ -39,14 +41,19 @@ export function Footer() {
               COMPANY
             </h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Services', 'Request Service'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors"
+              {[
+                { label: 'Home', path: '/' },
+                { label: 'About', path: '/about' },
+                { label: 'Services', path: '/services' },
+                { label: 'Request Service', path: '/request' },
+              ].map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors cursor-pointer"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -59,18 +66,18 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                'Institutional Finance Modeling',
-                'Data Analytics & Data Warehousing',
-                'Executive Business Intelligence',
-                'Strategic Financial Advisory',
+                { label: 'Institutional Finance Modeling', path: '/services/finance' },
+                { label: 'Data Analytics & Data Warehousing', path: '/services/analytics' },
+                { label: 'Executive Business Intelligence', path: '/services/bi' },
+                { label: 'Strategic Financial Advisory', path: '/services/finance' },
               ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#services"
-                    className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors"
+                <li key={item.label}>
+                  <Link
+                    to={item.path}
+                    className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors cursor-pointer"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>

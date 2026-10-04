@@ -1,9 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from './servicesData';
 
-export function ChooseYourServicesSection() {
-  const [activeCategoryId, setActiveCategoryId] = useState<string>('finance');
+interface ChooseYourServicesSectionProps {
+  categoryParam?: string;
+  selectedCategoryId?: string;
+  onCategoryChange?: (categoryId: string) => void;
+}
+
+const resolveCategoryId = (param?: string): string => {
+  if (!param) return 'finance';
+  const clean = param.toLowerCase().trim();
+  if (clean.includes('analytics')) return 'analytics';
+  if (clean.includes('bi') || clean.includes('intelligence')) return 'bi';
+  return 'finance';
+};
+
+export function ChooseYourServicesSection({
+  categoryParam,
+  selectedCategoryId,
+  onCategoryChange,
+}: ChooseYourServicesSectionProps = {}) {
+  const navigate = useNavigate();
+  const effectiveCategory = resolveCategoryId(categoryParam || selectedCategoryId);
+
+  const [activeCategoryId, setActiveCategoryId] = useState<string>(effectiveCategory);
   const [activeCapabilityIndex, setActiveCapabilityIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const target = resolveCategoryId(categoryParam || selectedCategoryId);
+    setActiveCategoryId(target);
+    setActiveCapabilityIndex(0);
+
+    
+    if (categoryParam) {
+      setTimeout(() => {
+        const el = document.getElementById('choose-your-services');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [categoryParam, selectedCategoryId]);
 
   const activeCategory = SERVICE_CATEGORIES.find((c) => c.id === activeCategoryId) || SERVICE_CATEGORIES[0];
   const activeCapability = activeCategory.capabilities[activeCapabilityIndex] || activeCategory.capabilities[0];
@@ -11,10 +49,12 @@ export function ChooseYourServicesSection() {
   const handleCategoryChange = (categoryId: string) => {
     setActiveCategoryId(categoryId);
     setActiveCapabilityIndex(0);
+    onCategoryChange?.(categoryId);
+    navigate(`/services/${categoryId}`, { replace: true });
   };
 
   return (
-    <section className="bg-[#F8FAFC] py-16 sm:py-20 lg:py-28 relative">
+    <section id="choose-your-services" className="bg-[#F8FAFC] py-16 sm:py-20 lg:py-28 relative scroll-mt-20">
       <div className="max-w-[1360px] mx-auto px-6 sm:px-8 lg:px-12">
         
         <div className="max-w-3xl mb-12 sm:mb-16">

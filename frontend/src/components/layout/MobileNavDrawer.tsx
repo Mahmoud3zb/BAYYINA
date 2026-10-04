@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import type { NavItem } from '../../types/navigation';
 import logoTightImg from '../../assets/images/logo_tight.png';
@@ -7,7 +8,6 @@ interface MobileNavDrawerProps {
   isOpen: boolean;
   onClose: () => void;
   activeTab: string;
-  onTabChange?: (tabId: string) => void;
   navItems: NavItem[];
 }
 
@@ -15,9 +15,9 @@ export function MobileNavDrawer({
   isOpen,
   onClose,
   activeTab,
-  onTabChange,
   navItems,
 }: MobileNavDrawerProps) {
+  const navigate = useNavigate();
   
   useEffect(() => {
     if (isOpen) {
@@ -43,8 +43,8 @@ export function MobileNavDrawer({
 
   if (!isOpen) return null;
 
-  const handleItemClick = (id: string) => {
-    onTabChange?.(id);
+  const handleNavigate = (path: string) => {
+    navigate(path);
     onClose();
   };
 
@@ -68,7 +68,7 @@ export function MobileNavDrawer({
         <div>
           <div className="flex items-center justify-between pb-5 border-b border-slate-200/70 mb-6">
             <div
-              onClick={() => handleItemClick('home')}
+              onClick={() => handleNavigate('/')}
               className="flex items-center cursor-pointer"
             >
               <img
@@ -112,7 +112,7 @@ export function MobileNavDrawer({
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => handleItemClick(item.id)}
+                  onClick={() => handleNavigate(item.href)}
                   className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl text-sm font-semibold transition-all duration-200 cursor-pointer ${
                     isActive
                       ? 'bg-[#104263] text-white shadow-md shadow-[#104263]/20'
@@ -144,7 +144,7 @@ export function MobileNavDrawer({
           <Button
             variant="primary"
             size="lg"
-            onClick={() => handleItemClick('request')}
+            onClick={() => handleNavigate('/request')}
             className="w-full justify-center shadow-lg shadow-[#104263]/20"
           >
             Request a Service

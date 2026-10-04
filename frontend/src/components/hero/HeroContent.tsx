@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
 
 export function HeroContent() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col items-start space-y-4 lg:space-y-5 w-full max-w-2xl">
       
@@ -25,18 +28,14 @@ export function HeroContent() {
         <Button
           variant="primary"
           size="lg"
-          onClick={() => {
-            window.location.hash = 'request';
-          }}
+          onClick={() => navigate('/request')}
         >
           Request a Service
         </Button>
         <Button
           variant="outline"
           size="lg"
-          onClick={() => {
-            window.location.hash = 'services';
-          }}
+          onClick={() => navigate('/services')}
         >
           Explore Our Services
         </Button>
