@@ -93,10 +93,10 @@ export function Footer() {
             <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Direct Email</span>
               <a
-                href="mailto:contact@bayina.analytics"
+                href="mailto:abdelrady979@gmail.com"
                 className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors block mt-0.5"
               >
-                contact@bayina.analytics
+                abdelrady979@gmail.com
               </a>
             </div>
 
@@ -104,10 +104,10 @@ export function Footer() {
             <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Direct Line</span>
               <a
-                href="tel:+97142308900"
+                href="tel:+201145600171"
                 className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors block mt-0.5"
               >
-                +971 4 230 8900
+                +201145600171
               </a>
             </div>
 
@@ -115,13 +115,13 @@ export function Footer() {
             <div className="mb-4">
               <span className="text-xs text-[#E3E9ED] block font-medium">Regional Presence</span>
               <span className="text-xs sm:text-[13px] text-[#8CA0B8] block mt-0.5">
-                DIFC Dubai & KAFD Riyadh
+                meddle east
               </span>
             </div>
 
             
             <a
-              href="#contact"
+              href="mailto:abdelrady979@gmail.com"
               className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-[#BAC7E1] hover:text-white transition-colors font-medium group mt-1"
             >
               <svg
@@ -137,7 +137,7 @@ export function Footer() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span>Connect With Partners</span>
+              <span>Connect with Partners</span>
             </a>
           </div>
 
