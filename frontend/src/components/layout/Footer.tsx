@@ -115,7 +115,7 @@ export function Footer() {
             <div className="mb-4">
               <span className="text-xs text-[#E3E9ED] block font-medium">Regional Presence</span>
               <span className="text-xs sm:text-[13px] text-[#8CA0B8] block mt-0.5">
-                meddle east
+                Middle East
               </span>
             </div>
 
