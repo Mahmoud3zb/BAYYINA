@@ -1,9 +1,9 @@
 // Destination configuration for serverless submissions
 export const SERVICE_REQUEST_CONFIG = {
   // Destination email for incoming service requests
-  recipientEmail: 'abdelrady979@gmail.com',
+  recipientEmail: 'bayina.advisory@gmail.com',
   // Direct zero-backend email delivery endpoint
-  endpoint: 'https://formsubmit.co/ajax/abdelrady979@gmail.com',
+  endpoint: 'https://formsubmit.co/ajax/bayina.advisory@gmail.com',
 };
 
 export interface FormData {

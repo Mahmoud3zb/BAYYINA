@@ -93,10 +93,10 @@ export function Footer() {
             <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Direct Email</span>
               <a
-                href="mailto:abdelrady979@gmail.com"
+                href="mailto:bayina.advisory@gmail.com"
                 className="text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors block mt-0.5"
               >
-                abdelrady979@gmail.com
+                bayina.advisory@gmail.com
               </a>
             </div>
 
@@ -121,7 +121,7 @@ export function Footer() {
 
             
             <a
-              href="mailto:abdelrady979@gmail.com"
+              href="mailto:bayina.advisory@gmail.com"
               className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-[#BAC7E1] hover:text-white transition-colors font-medium group mt-1"
             >
               <svg
