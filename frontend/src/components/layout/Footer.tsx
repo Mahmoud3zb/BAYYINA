@@ -112,38 +112,62 @@ export function Footer() {
             </div>
 
             
-            <div className="mb-4">
+            {/* Regional Presence */}
+            <div className="mb-3.5">
               <span className="text-xs text-[#E3E9ED] block font-medium">Regional Presence</span>
               <span className="text-xs sm:text-[13px] text-[#8CA0B8] block mt-0.5">
                 Middle East
               </span>
             </div>
 
-            
-            <a
-              href="mailto:bayina.advisory@gmail.com"
-              className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-[#BAC7E1] hover:text-white transition-colors font-medium group mt-1"
-            >
-              <svg
-                className="w-4 h-4 text-[#BAC7E1] group-hover:text-white transition-colors"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.8}
+            {/* LinkedIn */}
+            <div className="mb-4">
+              <span className="text-xs text-[#E3E9ED] block font-medium">LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/company/bayina/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-[#8CA0B8] hover:text-white transition-colors mt-1 group"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              <span>Connect with Partners</span>
-            </a>
+                <svg
+                  className="w-4 h-4 text-[#0A66C2] group-hover:scale-110 transition-transform shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                <span className="group-hover:underline">linkedin.com/company/bayina</span>
+              </a>
+            </div>
+
+            {/* Direct Connect Action */}
+            <div className="pt-1">
+              <a
+                href="mailto:bayina.advisory@gmail.com"
+                className="inline-flex items-center gap-2 text-xs sm:text-[13px] text-[#BAC7E1] hover:text-white transition-colors font-medium group"
+              >
+                <svg
+                  className="w-4 h-4 text-[#BAC7E1] group-hover:text-white transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.8}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>Connect with Partners</span>
+              </a>
+            </div>
           </div>
 
         </div>
 
-        
+        {/* Bottom Bar: Copyright & Legal */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-[#7B8FA6]">
           <p>© BAYINA. All Rights Reserved.</p>
           <div className="flex items-center gap-6 sm:gap-8">
@@ -155,6 +179,17 @@ export function Footer() {
             </a>
             <a href="#governance" className="hover:text-white transition-colors">
               Governance
+            </a>
+            <a
+              href="https://www.linkedin.com/company/bayina/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="BAYINA LinkedIn Profile"
+              className="text-[#7B8FA6] hover:text-[#0A66C2] transition-colors inline-flex items-center"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
             </a>
           </div>
         </div>
