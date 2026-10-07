@@ -167,12 +167,32 @@ export function RequestServicePage() {
 
       
       try {
-        const stored = JSON.parse(localStorage.getItem('bayyina_service_requests') || '[]');
-        stored.push({
+        const STORAGE_KEY = 'bayina_service_requests';
+        const LEGACY_KEY = 'bayyina_service_requests';
+
+        let storedRequests: unknown[] = [];
+        const currentStored = localStorage.getItem(STORAGE_KEY);
+
+        if (currentStored) {
+          storedRequests = JSON.parse(currentStored);
+        } else {
+          // Backward-compatible migration: read legacy key if new key does not exist yet
+          const legacyStored = localStorage.getItem(LEGACY_KEY);
+          if (legacyStored) {
+            storedRequests = JSON.parse(legacyStored);
+          }
+        }
+
+        if (!Array.isArray(storedRequests)) {
+          storedRequests = [];
+        }
+
+        storedRequests.push({
           ...formData,
           submittedAt: new Date().toISOString(),
         });
-        localStorage.setItem('bayyina_service_requests', JSON.stringify(stored));
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(storedRequests));
       } catch {
         // localStorage fallback
       }

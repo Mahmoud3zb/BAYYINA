@@ -11,38 +11,38 @@ interface SeoMetadata {
 
 const ROUTE_SEO: Record<string, SeoMetadata> = {
   '/': {
-    title: 'BAYINA | Financial Advisory & Business Intelligence',
-    description: 'BAYINA provides financial advisory, data analytics, and business intelligence solutions to help businesses make better decisions and grow.',
+    title: 'BAYINA | Financial Advisory, Data Analytics & Business Intelligence',
+    description: 'BAYINA helps organizations unlock clarity and performance through strategic financial advisory, advanced financial modeling, and executive business intelligence solutions.',
     canonical: `${BASE_URL}/`,
   },
   '/about': {
-    title: 'About Us | BAYINA — Financial Advisory & Analytics',
-    description: 'Learn about BAYINA, our mission, values, and senior advisory team helping organizations unlock performance through finance and data intelligence.',
+    title: 'About Us | BAYINA — Financial Advisory & Analytics Firm',
+    description: 'Discover BAYINA: an advisory firm operating at the intersection of institutional finance and business intelligence, helping leadership teams turn data into decisive action.',
     canonical: `${BASE_URL}/about`,
   },
   '/services': {
-    title: 'Services | BAYINA — Financial Modeling, Analytics & BI',
-    description: 'Explore BAYINA institutional services: Strategic Financial Advisory, Data Analytics & Warehousing, and Executive Business Intelligence.',
+    title: 'Advisory & Analytics Services | BAYINA',
+    description: 'Explore BAYINA\'s institutional service portfolio: Strategic Financial Modeling, Enterprise Data Analytics, and Executive Business Intelligence Dashboards.',
     canonical: `${BASE_URL}/services`,
   },
   '/services/finance': {
-    title: 'Strategic Financial Advisory & Modeling | BAYINA',
-    description: 'Institutional financial statement analysis, FP&A, liquidity forecasting, and financial modeling shaped for executive decision-making.',
+    title: 'Financial Modeling & Strategic Advisory Services | BAYINA',
+    description: 'Institutional financial statement analysis, dynamic 3-statement financial modeling, cash flow forecasting, and FP&A advisory engineered for leadership teams.',
     canonical: `${BASE_URL}/services/finance`,
   },
   '/services/analytics': {
-    title: 'Data Analytics & Warehousing | BAYINA',
-    description: 'Transform enterprise data into operational insights across sales, customer lifetime value, inventory, procurement, and operations.',
+    title: 'Enterprise Data Analytics & Warehousing Services | BAYINA',
+    description: 'Transform raw enterprise data into operational insights across sales, customer retention, procurement, inventory, and workforce productivity.',
     canonical: `${BASE_URL}/services/analytics`,
   },
   '/services/bi': {
-    title: 'Executive Business Intelligence | BAYINA',
-    description: 'Consolidated executive dashboards, KPI telemetry, and automated management reporting providing real-time visibility across departments.',
+    title: 'Executive Business Intelligence & Power BI Solutions | BAYINA',
+    description: 'Empower leadership with live Power BI executive dashboards, automated management reporting, KPI telemetry, and sub-second decision support.',
     canonical: `${BASE_URL}/services/bi`,
   },
   '/request': {
-    title: 'Request a Service & Consultation | BAYINA',
-    description: 'Connect with BAYINA partners to scope your engagement in financial advisory, data analytics, or business intelligence.',
+    title: 'Request a Consultation & Scope Your Project | BAYINA',
+    description: 'Submit your business inquiry to BAYINA. Our senior partners will review your data sources, scope your advisory engagement, and respond within 24 hours.',
     canonical: `${BASE_URL}/request`,
   },
 };

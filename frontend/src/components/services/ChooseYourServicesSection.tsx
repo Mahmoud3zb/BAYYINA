@@ -214,7 +214,7 @@ export function ChooseYourServicesSection({
 
               
               <div className="pt-6 border-t border-slate-200/60 mt-auto">
-                <div>
+                <div className="mb-5">
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1E5BB8] mb-2 block">
                     WHAT THIS CREATES
                   </span>
@@ -226,6 +226,57 @@ export function ChooseYourServicesSection({
                       {activeCapability.whatItCreates}
                     </p>
                   </div>
+                </div>
+
+                {/* Strategic Internal Cross-Service Linking & CTA */}
+                <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+                  {activeCategoryId === 'finance' && (
+                    <button
+                      type="button"
+                      onClick={() => handleCategoryChange('bi')}
+                      className="text-xs font-semibold text-[#1E5BB8] hover:text-[#104263] transition-colors inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>Connect with Business Intelligence</span>
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                  )}
+                  {activeCategoryId === 'analytics' && (
+                    <button
+                      type="button"
+                      onClick={() => handleCategoryChange('bi')}
+                      className="text-xs font-semibold text-[#1E5BB8] hover:text-[#104263] transition-colors inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>Visualize in Executive Dashboards</span>
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                  )}
+                  {activeCategoryId === 'bi' && (
+                    <button
+                      type="button"
+                      onClick={() => handleCategoryChange('finance')}
+                      className="text-xs font-semibold text-[#1E5BB8] hover:text-[#104263] transition-colors inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>Explore Financial Modeling</span>
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                  )}
+
+                  <button
+                    type="button"
+                    onClick={() => navigate('/request')}
+                    className="text-xs font-bold text-white bg-[#104263] hover:bg-[#0B324D] px-3.5 py-1.5 rounded-lg transition-colors inline-flex items-center gap-1.5 cursor-pointer ml-auto shadow-xs"
+                  >
+                    <span>Request Service</span>
+                    <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
                 </div>
               </div>
 

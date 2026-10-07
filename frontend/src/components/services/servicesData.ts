@@ -26,7 +26,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     lensNumber: '01',
     iconSrc: eurIcon,
     iconBg: 'bg-[#EEF5FF]',
-    lensDescription: 'Build a trusted financial view that connects reporting, planning, cash, and profitability.',
+    lensDescription: 'Build a trusted financial view connecting dynamic financial modeling, FP&A forecasting, cash flow intelligence, and granular profitability analysis.',
     capabilities: [
       {
         id: 'fin-1',
@@ -72,7 +72,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     lensNumber: '02',
     iconSrc: pieIcon,
     iconBg: 'bg-[#F5EEFF]',
-    lensDescription: 'Turn business data into meaningful insight across departments, systems, and operational processes.',
+    lensDescription: 'Transform enterprise business data into operational insights across sales, customer retention, inventory, procurement, and data warehousing.',
     capabilities: [
       {
         id: 'da-1',
@@ -136,7 +136,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     lensNumber: '03',
     iconSrc: biIcon,
     iconBg: 'bg-[#E8F8F0]',
-    lensDescription: 'Give every part of the business a clearer, live view of performance across executive and departmental levels.',
+    lensDescription: 'Empower leadership with live Power BI executive dashboards, automated management reporting, KPI telemetry, and real-time decision support.',
     capabilities: [
       {
         id: 'bi-1',

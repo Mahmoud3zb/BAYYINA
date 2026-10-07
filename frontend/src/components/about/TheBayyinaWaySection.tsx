@@ -1,4 +1,4 @@
-export function TheBayyinaWaySection() {
+export function TheBayinaWaySection() {
   const steps = [
     {
       number: '01',
