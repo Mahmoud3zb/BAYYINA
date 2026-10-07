@@ -1,0 +1,21 @@
+{
+  "name": "BAYINA",
+  "short_name": "BAYINA",
+  "description": "Financial Advisory, Data Analytics & Executive Business Intelligence",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F7FA",
+  "theme_color": "#104263",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
